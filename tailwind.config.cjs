@@ -15,7 +15,7 @@ module.exports = {
 			},
 			colors: {
 				// 'plum': '#302532',
-				'background': '#141e24',
+				'background': '#393a3d',
 				'text': '#f3ecc0'
 			}
 		},
