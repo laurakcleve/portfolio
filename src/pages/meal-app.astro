@@ -1,0 +1,86 @@
+---
+import { Picture } from '@astrojs/image/components'
+
+import Layout from '../layouts/Layout.astro'
+import img1 from '../images/meal-app/1.png'
+---
+
+<Layout title='Meal app | Laura Cleveland'>
+  <h1 class='mb-8 text-3xl font-bold'>Meal app</h1>
+  <p class='mb-12'>
+    Magna duis adipisicing sunt sit occaecat ut ipsum aute id non deserunt amet.
+    Culpa enim ea in duis sint eiusmod dolore. Est amet eiusmod mollit veniam
+    non. Adipisicing quis aliquip dolore veniam fugiat enim labore veniam
+    consequat excepteur.
+
+    <h3 class='mb-3 text-lg font-semibold'>Created with</h3>
+    <ul class='mb-20'>
+      <li class='mb-2'>React</li>
+      <li class='mb-2'>GraphQL</li>
+      <li class='mb-2'>Apollo Client</li>
+      <li class='mb-2'>Styled-components</li>
+      <li class='mb-2'>PostgreSQL</li>
+      <li class='mb-2'>Apollo Server/Go with gqlgen</li>
+    </ul>
+
+    <p class='mb-6'>Don't forget to make properly sized images.</p>
+
+    <Picture
+      src={img1}
+      alt='screenshot'
+      widths={[600]}
+      aspectRatio='16:9'
+      class='mb-20 rounded-md'
+    />
+
+    <h2 class='mb-4 text-xl font-bold'>Motivation, etc.</h2>
+    <p class='mb-20'>
+      Esse consectetur ad esse ex cillum voluptate sunt quis enim enim dolore
+      proident fugiat Lorem. Ipsum aute ullamco proident non laborum minim culpa
+      duis proident irure ad quis. Minim consectetur elit aute excepteur
+      occaecat quis dolore aliquip cillum aliquip minim. Qui magna incididunt
+      cupidatat esse incididunt commodo ea minim veniam. Laboris voluptate
+      officia in elit eu officia laboris incididunt ut esse commodo voluptate.
+      Laboris voluptate dolor aliquip consectetur ut esse qui. Reprehenderit
+      aliqua commodo cillum consequat excepteur esse.
+    </p>
+
+    <h2 class='mb-4 text-xl font-bold'>Cool features</h2>
+    <p class='mb-6'>
+      Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+      Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna. Aliqua
+      minim labore velit excepteur labore exercitation dolore esse cillum. Lorem
+      ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea aliquip commodo
+      ut duis nisi dolore sint sunt amet sunt. Cupidatat culpa nulla voluptate
+      ut amet laboris officia nulla do ut laborum quis.
+    </p>
+
+    <h3 class='text-lg font-semibold'>Datalist element?</h3>
+    <p class='mb-6'>
+      Ex aliqua in eiusmod incididunt fugiat voluptate quis ad. Mollit occaecat
+      commodo in ut officia incididunt. Veniam voluptate pariatur ad enim
+      mollit. Esse aliquip incididunt sunt esse magna culpa excepteur eu
+      proident nulla amet irure elit officia. Fugiat commodo consequat
+      incididunt reprehenderit. Velit velit ipsum ipsum irure in nisi Lorem
+      tempor ad ullamco. Officia ea ex officia ut excepteur do est.
+    </p>
+
+    <h2 class='text-xl font-bold'>Technical challenges</h2>
+    <p class='mb-6'>
+      Exercitation adipisicing mollit reprehenderit occaecat. Magna voluptate ex
+      voluptate nulla ut consequat ut reprehenderit cillum aute cupidatat eu.
+      Nisi pariatur dolore labore nulla laborum sint occaecat tempor veniam id.
+      In excepteur elit ut fugiat veniam. Do nulla pariatur ullamco elit aute
+      est sit ad sit irure qui nisi qui. Velit do nostrud tempor occaecat minim
+      commodo excepteur magna sint consequat sunt fugiat. Cillum magna ea ipsum
+      consectetur.
+    </p>
+
+    <h2 class='text-xl font-bold'>Drawbacks?</h2>
+    <p class='mb-6'>
+      Ad qui aute aliquip non laborum ipsum dolor amet aliquip. Quis anim sunt
+      officia aliqua duis nostrud proident enim exercitation eiusmod. Anim
+      tempor id ullamco excepteur cupidatat enim laborum magna dolore.
+    </p>
+  </p>
+</Layout>

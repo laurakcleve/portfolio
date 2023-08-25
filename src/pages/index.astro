@@ -1,165 +1,107 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import { Picture } from '@astrojs/image/components'
-import img1 from '../images/nemesisAI.png'
-import img2 from '../images/mealApp.png'
-import img3 from '../images/img3.png'
-import img4 from '../images/img4.png'
+import Project from '../components/Project.astro'
+import nemesisAiThumbnail from '../images/nemesis-ai/thumbnail.jpg'
+import mealAppThumbnail from '../images/meal-app/thumbnail.jpg'
+import vrTacticsThumbnail from '../images/vr-tactics/thumbnail.jpg'
+import thumbnail from '../images/terrain-blog/thumbnail.png'
 ---
 
-<Layout title='Welcome to Astro.'>
-  <main class='mt-32 xs:mt-40 sm:mt-52 w-11/12 max-w-3xl mx-auto px-4'>
-    <div
-      class='w-48 xs:w-60 sm:w-72 h-4 bg-red-500 absolute top-20 xs:top-24 sm:top-28 left-0 opacity-30'
-    >
-    </div>
-    <div
-      class='absolute top-16 xs:top-20 sm:top-24 left-24 xs:left-40 sm:left-44'
-    >
-      Links
-    </div>
-    <div class='mb-32'>
-      <h1 class='mb-8 text-3xl font-bold'>A title</h1>
-      <p class='mb-6 max-w-lg'>
-        Egestas rhoncus egestas gravida rhoncus amet ac lobortis sit. Malesuada
-        accumsan sagittis tincidunt lectus.
-      </p>
-      <p class='max-w-lg'>
-        Malesuada accumsan sagittis tincidunt lectus. Aliquet sed nec aenean
-        placerat volutpat ut. Ipsum etiam aliquam facilisis et eget sed. Gravida
-        congue vitae laoreet non faucibus ultricies.
-      </p>
-    </div>
+<Layout title='Laura Cleveland'>
+  <!-- <div
+    class='w-48 xs:w-60 sm:w-72 h-4 bg-red-500 absolute top-20 xs:top-24 sm:top-28 left-0 opacity-30'
+  >
+  </div>
+  <div
+    class='absolute top-16 xs:top-20 sm:top-24 left-24 xs:left-40 sm:left-44'
+  >
+    Links
+  </div> -->
+  <div class='mb-32'>
+    <h1 class='mb-8 text-3xl font-bold'>Laura Cleveland</h1>
+    <p class='mb-6 max-w-lg'>
+      Voluptate est labore voluptate est ut esse occaecat deserunt excepteur
+      laboris. Nostrud nulla eu laboris veniam adipisicing fugiat pariatur est
+      voluptate consequat occaecat nostrud aliqua. Adipisicing aliquip tempor
+      tempor laborum ex ut aliquip nulla nisi ad pariatur.
+    </p>
+    <p class='max-w-lg'>
+      Dolor dolor veniam labore non aliquip ipsum sit minim anim id. Aliqua
+      fugiat mollit aliqua officia ullamco aute officia quis ea culpa. Anim
+      labore sint consequat non pariatur ad duis proident veniam dolore irure.
+    </p>
+  </div>
 
-    <div class='mb-32'>
-      <h2 class='mb-8 text-2xl font-bold'>My Skills</h2>
-      <p class='mb-6 max-w-lg'>
-        Curabitur convallis, turpis et lacinia lobortis, arcu eros elementum
-        justo, a vehicula tortor lorem nec dui. Morbi nec imperdiet ante.
-      </p>
+  <div class='mb-32'>
+    <h2 class='mb-8 text-2xl font-bold'>My Skills</h2>
+    <p class='mb-6 max-w-lg'>
+      Nisi proident consectetur adipisicing fugiat culpa veniam laboris. Quis
+      magna id est sit nisi officia nisi duis tempor amet anim cupidatat
+      reprehenderit. Nisi eu amet mollit ad dolore excepteur sunt qui.
+    </p>
 
-      <!-- I know there is a way to do thirds for these that has better balance -->
-      <ul class='flex flex-wrap text-sm font-medium uppercase'>
-        <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-100'>Javascript</li>
-        <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-200'>React</li>
-        <li
-          class='basis-1/2 xs:basis-1/3 py-3 text-orange-200 xs:text-orange-300'
-        >
-          Laoreet
-        </li>
-        <li
-          class='basis-1/2 xs:basis-1/3 py-3 text-orange-300 xs:text-orange-200'
-        >
-          Faucibus
-        </li>
-        <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-300'>Arcu turpis</li>
-        <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-400'>Sagittis</li>
-      </ul>
-    </div>
+    <!-- I know there is a way to do thirds for these that has better balance -->
+    <ul class='flex flex-wrap text-sm font-medium uppercase'>
+      <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-100'>Javascript</li>
+      <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-200'>React</li>
+      <li
+        class='basis-1/2 xs:basis-1/3 py-3 text-orange-200 xs:text-orange-300'
+      >
+        SQL
+      </li>
+      <li
+        class='basis-1/2 xs:basis-1/3 py-3 text-orange-300 xs:text-orange-200'
+      >
+        Faucibus
+      </li>
+      <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-300'>Arcu turpis</li>
+      <li class='basis-1/2 xs:basis-1/3 py-3 text-orange-400'>Sagittis</li>
+    </ul>
+  </div>
 
-    <div class='mb-32'>
-      <h2 class='mb-6 text-2xl font-bold'>Featured Projects</h2>
-      <p class='mb-16 max-w-lg'>
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-        inceptos himenaeos. Pellentesque vel gravida dui.
-      </p>
+  <div class='mb-32'>
+    <h2 class='mb-6 text-2xl font-bold'>Featured Projects</h2>
+    <p class='mb-16 max-w-lg'>
+      Nulla do nisi ipsum duis ut qui aliquip consectetur veniam dolor. Sunt
+      incididunt est esse mollit magna consequat exercitation aute velit
+      incididunt. Aliqua reprehenderit ipsum sit est non minim aute pariatur
+      tempor sint occaecat incididunt. Aute eiusmod sit anim qui laboris tempor
+      adipisicing veniam ipsum do Lorem proident ullamco.
+    </p>
 
-      <!-- Picture sizes, widths, ratio, all placeholders for now -->
-      <div class='mb-24 flex flex-wrap'>
-        <div class='mb-4 sm:basis-3/5 pr-8'>
-          <h3 class='mb-4 text-xl font-medium'>Nemesis AI</h3>
-          <p class='mb-4 md:mb-8'>
-            Praesent rhoncus orci vitae venenatis finibus. Nunc vel gravida
-            nisl.
-          </p>
-          <a href='#' class='text-sm font-bold uppercase'
-            >Nulla efficitur &rsaquo;</a
-          >
-        </div>
-        <div class='sm:basis-2/5'>
-          <Picture
-            src={img1}
-            widths={[600]}
-            alt='nemesis-ai-screenshot'
-            aspectRatio='3:2'
-            sizes='(max-width: 800px) 100vw, 800px'
-            class='rounded-xl drop-shadow-[0_12px_20px_rgba(28,30,33,0.9)]'
-          />
-        </div>
-      </div>
+    <Project
+      title='Nemesis AI'
+      description='A GPT-powered chatbot to answer questions about board game rules'
+      image={nemesisAiThumbnail}
+      url='nemesis-ai'
+    />
 
-      <div class='mb-24 flex flex-wrap'>
-        <div class='mb-4 sm:basis-3/5 pr-8'>
-          <h3 class='mb-4 text-xl font-medium'>Meal app</h3>
-          <p class='mb-4 md:mb-8'>
-            Sed dui mi, vestibulum sit amet dictum sit amet, aliquam at ante.
-          </p>
-          <a href='#' class='text-sm font-bold uppercase'
-            >Nulla efficitur &rsaquo;</a
-          >
-        </div>
-        <div class='sm:basis-2/5'>
-          <Picture
-            src={img2}
-            widths={[600]}
-            alt='placeholder'
-            aspectRatio='3:2'
-            sizes='(max-width: 800px) 100vw, 800px'
-            class='rounded-xl drop-shadow-[0_12px_20px_rgba(28,30,33,0.9)]'
-          />
-        </div>
-      </div>
+    <Project
+      title='Meal app'
+      description='Tracks meals and their ingredients, food purchases, and home inventory'
+      image={mealAppThumbnail}
+      url='meal-app'
+    />
 
-      <div class='mb-24 flex flex-wrap'>
-        <div class='mb-4 sm:basis-3/5 pr-8'>
-          <h3 class='mb-4 text-xl font-medium'>Mauris sit amet</h3>
-          <p class='mb-4 md:mb-8'>
-            Nunc vel gravida nisl. Vestibulum ut lectus eu odio egestas tempor.
-          </p>
-          <a href='#' class='text-sm font-bold uppercase'
-            >Nulla efficitur &rsaquo;</a
-          >
-        </div>
-        <div class='sm:basis-2/5'>
-          <Picture
-            src={img3}
-            widths={[600]}
-            alt='placeholder'
-            aspectRatio='3:2'
-            sizes='(max-width: 800px) 100vw, 800px'
-            class='rounded-xl drop-shadow-[0_12px_20px_rgba(28,30,33,0.9)]'
-          />
-        </div>
-      </div>
+    <Project
+      title='Tactics VR'
+      description='The beginnings of a tactics game for SteamVR, built with Unity'
+      image={vrTacticsThumbnail}
+      url='vr-tactics'
+    />
 
-      <div class='mb-24 flex flex-wrap'>
-        <div class='mb-4 sm:basis-3/5 pr-8'>
-          <h3 class='mb-4 text-xl font-medium'>Rutrum ac lectus quis</h3>
-          <p class='mb-4 md:mb-8'>
-            Sed posuere tortor a ex dapibus, non hendrerit sapien pretium.
-          </p>
-          <a href='#' class='text-sm font-bold uppercase'
-            >Nulla efficitur &rsaquo;</a
-          >
-        </div>
-        <div class='sm:basis-2/5'>
-          <Picture
-            src={img4}
-            widths={[600]}
-            alt='placeholder'
-            aspectRatio='3:2'
-            sizes='(max-width: 800px) 100vw, 800px'
-            class='rounded-xl drop-shadow-[0_12px_20px_rgba(28,30,33,0.9)]'
-          />
-        </div>
-      </div>
-    </div>
+    <Project
+      title='1d3trees: Tabletop DIY Blog'
+      description="Blog for detailing the process of crafting bits and bobs for tabletop games, and showcasing miniatures I've painted"
+      image={thumbnail}
+      url='#'
+    />
 
     <div class='mb-40'>
-      <h2 class='mb-6 text-2xl font-bold'>Sed pretium tellus quam</h2>
+      <h2 class='mb-6 text-2xl font-bold'>Get in touch</h2>
       <p class='mb-6 max-w-md'>
-        Aenean nibh enim, efficitur ac mauris ac, pretium vestibulum dolor.
-        Vestibulum dictum ipsum.
+        Anim Lorem et esse sunt duis commodo culpa exercitation est pariatur
+        Lorem qui mollit adipisicing.
       </p>
       <a href='#' class='text-sm font-bold uppercase border-b border-b-text'
         >Nunc vel gravida nisl</a
@@ -167,9 +109,9 @@ import img4 from '../images/img4.png'
     </div>
 
     <div class='flex justify-end mb-8'>
-      <a href='#' class='ml-6'>eleifend</a>
-      <a href='#' class='ml-6'>velit</a>
-      <a href='#' class='ml-6'>suspendisse</a>
+      <a href='#' class='ml-6'>github</a>
+      <a href='#' class='ml-6'>twitter</a>
+      <a href='#' class='ml-6'>something else?</a>
     </div>
-  </main>
+  </div>
 </Layout>

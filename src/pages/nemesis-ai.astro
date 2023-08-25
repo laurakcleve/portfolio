@@ -1,0 +1,84 @@
+---
+import { Picture } from '@astrojs/image/components'
+import Layout from '../layouts/Layout.astro'
+import screenshotFullWithAnswer from '../images/nemesis-ai/screenshot-full-with-answer.png'
+---
+
+<Layout title='Nemesis AI | Laura Cleveland'>
+  <h1 class='mt-32 mb-16 text-3xl font-bold'>Nemesis AI</h1>
+  <p class='mb-6 max-w-xl'>
+    Laborum et cillum velit est sit irure voluptate consectetur nostrud aute
+    reprehenderit laboris exercitation voluptate. Aute duis laboris ullamco
+    laborum et fugiat adipisicing nostrud fugiat eu. Officia ut quis ipsum eu.
+  </p>
+  <p class='mb-16 max-w-xl'>
+    Nemesis AI is a bot that I built to answer questions about the rules of the
+    board game <a
+      href='https://awakenrealms.com/games/nemesis/'
+      target='_blank'
+      rel='noopener noreferrer'
+      class='text-teal-500'>Nemesis</a
+    >.
+  </p>
+
+  <h3 class='mb-3 text-lg font-semibold'>Created with</h3>
+  <ul class='mb-16'>
+    <li class='mb-2'>Python</li>
+    <li class='mb-2'>Langchain</li>
+    <li class='mb-2'>OpenAI API</li>
+    <li class='mb-2'>React</li>
+    <li class='mb-2'>Next.js</li>
+    <li class='mb-2'>Tailwind CSS</li>
+  </ul>
+
+  <div class='mb-20'>
+    <a href='' class='mb-20 mr-3 px-4 py-2 bg-slate-500 rounded-full'
+      >Visit Site &rsaquo;</a
+    >
+    <a href='' class='mb-20 px-4 py-2 bg-slate-600 rounded-full'
+      >Github &rsaquo;</a
+    >
+  </div>
+
+  <Picture
+    src={screenshotFullWithAnswer}
+    alt='screenshot'
+    widths={[600]}
+    aspectRatio='16:9'
+    class='mb-32 rounded-lg'
+  />
+
+  <h2 class='mb-4 text-xl font-bold'>Motivation and purpose</h2>
+  <p class='mb-20'>
+    Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
+    velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum. Est
+    anim esse nulla qui non pariatur nisi enim amet. Enim aliquip excepteur qui
+    sint consequat. In occaecat minim ex deserunt do ut cillum eu magna. Fugiat
+    exercitation Lorem est commodo irure dolore non Lorem. Excepteur magna ex
+    eiusmod adipisicing dolor veniam reprehenderit tempor officia velit. Velit
+    dolor qui consectetur deserunt aliqua non laborum eiusmod ea ea.
+  </p>
+  <h2 class='mb-4 text-xl font-bold'>More of the background?</h2>
+  <p class='mb-20'>
+    Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
+    consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
+    Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
+    excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
+    proident ut sit nisi proident fugiat labore nulla magna. Exercitation irure
+    ex veniam proident cillum consequat est id eu aute dolore eiusmod officia
+    eiusmod.
+  </p>
+  <h2 class='mb-4 text-xl font-bold'>Hurdles</h2>
+  <p class='mb-6'>
+    Dolor dolore minim sunt nisi consequat cillum sint incididunt aute. Officia
+    cillum labore quis ipsum sint laborum aliqua sit sit ipsum ad. Laborum minim
+    duis id irure non nostrud pariatur. Nisi officia deserunt ipsum deserunt
+    veniam eu. Veniam culpa proident consectetur enim Lorem in. Anim aute minim
+    ad ad dolore.
+  </p>
+  <p class='mb-20'>
+    Lorem non velit aliqua proident minim ea elit. Ea enim duis nisi sint id.
+    Laboris eu consectetur cupidatat fugiat sint proident velit consectetur ex
+    sit incididunt eu.
+  </p>
+</Layout>
