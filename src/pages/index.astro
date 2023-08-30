@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
 import Project from '../components/Project.astro'
+import CornerGraphic from '../images/CornerGraphic.astro'
 import nemesisAiThumbnail from '../images/nemesis-ai/thumbnail.jpg'
 import mealAppThumbnail from '../images/meal-app/thumbnail.jpg'
 import vrTacticsThumbnail from '../images/vr-tactics/thumbnail.jpg'
@@ -9,14 +10,20 @@ import thumbnail from '../images/terrain-blog/thumbnail.png'
 ---
 
 <Layout title='Laura Cleveland'>
+  <div class='absolute right-0 w-64 sm:w-80 md:w-96 opacity-50'>
+    <CornerGraphic />
+  </div>
   <div
-    class='pt-56 pb-24 pl-12 bg-gradient-to-br from-gradient-start to-gradient-end'
+    class='pt-56 pb-24 bg-gradient-to-br from-gradient-start to-gradient-end'
   >
     <Section>
-      <h1 class='text-3xl xs:text-4xl sm:text-5xl font-semibold'>
+      <h1 class='mb-20 text-3xl xs:text-4xl sm:text-5xl font-semibold'>
         <span class='block text-accent-1'>Laura</span>
         <span class='block text-accent-2'>Cleveland</span>
       </h1>
+      <p class='max-w-sm'>
+        Eu enim proident incididunt consectetur cillum laboris qui sunt.
+      </p>
     </Section>
   </div>
 
@@ -66,9 +73,7 @@ import thumbnail from '../images/terrain-blog/thumbnail.png'
     <p class='mb-16 max-w-lg'>
       Nulla do nisi ipsum duis ut qui aliquip consectetur veniam dolor. Sunt
       incididunt est esse mollit magna consequat exercitation aute velit
-      incididunt. Aliqua reprehenderit ipsum sit est non minim aute pariatur
-      tempor sint occaecat incididunt. Aute eiusmod sit anim qui laboris tempor
-      adipisicing veniam ipsum do Lorem proident ullamco.
+      incididunt.
     </p>
 
     <Project
