@@ -1,86 +1,310 @@
 ---
 import { Picture } from '@astrojs/image/components'
 
-import Layout from '../layouts/Layout.astro'
-import img1 from '../images/meal-app/thumbnail.jpg'
+import ProjectLayout from '../layouts/ProjectLayout.astro'
+import thumbnail from '../images/meal-app/thumbnail.jpg'
+import dishImg from '../images/meal-app/dish.png'
+import addGif from '../images/meal-app/purchase-item-add.gif'
+import Section from '../components/Section.astro'
+import ListItem from '../components/ListItem.astro'
+import SiteLink from '../components/project-links/SiteLink.astro'
+import GithubLink from '../components/project-links/GithubLink.astro'
+import mealAppFt1 from '../images/meal-app/mealapp-ft-1.png'
+import mealAppFt2 from '../images/meal-app/mealapp-ft-2.png'
+import mealAppFt3 from '../images/meal-app/mealapp-ft-3.png'
+import mealAppFt4 from '../images/meal-app/mealapp-ft-4.png'
+import mealAppFt5 from '../images/meal-app/mealapp-ft-5.png'
+import mealAppFt6 from '../images/meal-app/mealapp-ft-6.png'
+import searchFilter from '../images/meal-app/search-filter.png'
+import ingredientOptions from '../images/meal-app/ingredient-options.png'
+import datalist from '../images/meal-app/datalist.png'
 ---
 
-<Layout title='Meal app | Laura Cleveland'>
-  <h1 class='mb-8 text-3xl font-bold'>Meal app</h1>
-  <p class='mb-12'>
-    Magna duis adipisicing sunt sit occaecat ut ipsum aute id non deserunt amet.
-    Culpa enim ea in duis sint eiusmod dolore. Est amet eiusmod mollit veniam
-    non. Adipisicing quis aliquip dolore veniam fugiat enim labore veniam
-    consequat excepteur.
+<ProjectLayout title='Meal app | Laura Cleveland'>
+  <div class='[grid-column:2]'>
+    <div class='my-32'>
+      <h1 class='mb-16 text-3xl font-bold'>Meal app</h1>
+      <p class='mb-6 max-w-xl'>
+        Magna duis adipisicing sunt sit occaecat ut ipsum aute id non deserunt
+        amet. Culpa enim ea in duis sint eiusmod dolore. Est amet eiusmod mollit
+        veniam non. Adipisicing quis aliquip dolore veniam fugiat enim labore
+        veniam consequat excepteur.
+      </p>
+      <p class='mb-6'>Don't forget to make properly sized images.</p>
+    </div>
 
-    <h3 class='mb-3 text-lg font-semibold'>Created with</h3>
-    <ul class='mb-20'>
-      <li class='mb-2'>React</li>
-      <li class='mb-2'>GraphQL</li>
-      <li class='mb-2'>Apollo Client</li>
-      <li class='mb-2'>Styled-components</li>
-      <li class='mb-2'>PostgreSQL</li>
-      <li class='mb-2'>Apollo Server/Go with gqlgen</li>
-    </ul>
+    <div class='mb-10'>
+      <div class='flex flex-wrap items-center'>
+        <div class='grow'>
+          <h3 class='mb-8 text-lg font-semibold'>Created with</h3>
+          <ul>
+            <ListItem>React</ListItem>
+            <ListItem>GraphQL</ListItem>
+            <ListItem>Apollo Client</ListItem>
+            <ListItem>Styled-components</ListItem>
+            <ListItem>PostgreSQL</ListItem>
+            <ListItem>
+              Apollo Server/Go with gqlgen<span class='text-lg text-amber-500'
+                >*</span
+              >
+            </ListItem>
+          </ul>
+        </div>
 
-    <p class='mb-6'>Don't forget to make properly sized images.</p>
+        <div class='grow shrink-0'>
+          <div class='mb-12'>
+            <SiteLink url='#' />
+          </div>
+          <div>
+            <GithubLink url='#' />
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <Picture
-      src={img1}
-      alt='screenshot'
-      widths={[600]}
-      aspectRatio='16:9'
-      class='mb-20 rounded-md'
-    />
+    <div class='col-span-full flex justify-end mb-24'>
+      <div class='basis-1/2 text-sm pr-16 leading-7'>
+        <span class='text-lg text-amber-500'>*</span> I originally built the backend
+        in Node and Apollo Server, and later built a second version of the server
+        in Go as a way to get started learning the language. I used the gqlgen library
+        to maintain the GraphQL functionality and stay compatible with my Apollo-based
+        frontend.
+      </div>
+    </div>
 
-    <h2 class='mb-4 text-xl font-bold'>Motivation, etc.</h2>
-    <p class='mb-20'>
-      Esse consectetur ad esse ex cillum voluptate sunt quis enim enim dolore
-      proident fugiat Lorem. Ipsum aute ullamco proident non laborum minim culpa
-      duis proident irure ad quis. Minim consectetur elit aute excepteur
-      occaecat quis dolore aliquip cillum aliquip minim. Qui magna incididunt
-      cupidatat esse incididunt commodo ea minim veniam. Laboris voluptate
-      officia in elit eu officia laboris incididunt ut esse commodo voluptate.
-      Laboris voluptate dolor aliquip consectetur ut esse qui. Reprehenderit
-      aliqua commodo cillum consequat excepteur esse.
-    </p>
+    <div class='mb-32'>
+      <Picture
+        src={thumbnail}
+        alt='screenshot'
+        widths={[600]}
+        aspectRatio='16:9'
+        class='mb-20 rounded-md'
+      />
+    </div>
 
-    <h2 class='mb-4 text-xl font-bold'>Cool features</h2>
-    <p class='mb-6'>
-      Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-      Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna. Aliqua
-      minim labore velit excepteur labore exercitation dolore esse cillum. Lorem
-      ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea aliquip commodo
-      ut duis nisi dolore sint sunt amet sunt. Cupidatat culpa nulla voluptate
-      ut amet laboris officia nulla do ut laborum quis.
-    </p>
+    <div class='mb-32'>
+      <h2 class='mb-16 text-xl font-bold'>Background and goal</h2>
+      <p class='mb-16 max-w-2xl'>
+        Esse consectetur ad esse ex cillum voluptate sunt quis enim enim dolore
+        proident fugiat Lorem. Ipsum aute ullamco proident non laborum minim
+        culpa duis proident irure ad quis. Minim consectetur elit aute excepteur
+        occaecat quis dolore aliquip cillum aliquip minim. Qui magna incididunt
+        cupidatat esse incididunt commodo ea minim veniam. Laboris voluptate
+        officia in elit eu officia laboris incididunt ut esse commodo voluptate.
+        Laboris voluptate dolor aliquip consectetur ut esse qui. Reprehenderit
+        aliqua commodo cillum consequat excepteur esse.
+      </p>
+      <p class='max-w-2xl'>
+        Elit cupidatat reprehenderit proident ea voluptate cupidatat duis ad
+        ullamco. Ullamco commodo minim dolor ullamco id nisi. Laboris minim amet
+        tempor tempor.
+      </p>
+    </div>
 
-    <h3 class='text-lg font-semibold'>Datalist element?</h3>
-    <p class='mb-6'>
-      Ex aliqua in eiusmod incididunt fugiat voluptate quis ad. Mollit occaecat
-      commodo in ut officia incididunt. Veniam voluptate pariatur ad enim
-      mollit. Esse aliquip incididunt sunt esse magna culpa excepteur eu
-      proident nulla amet irure elit officia. Fugiat commodo consequat
-      incididunt reprehenderit. Velit velit ipsum ipsum irure in nisi Lorem
-      tempor ad ullamco. Officia ea ex officia ut excepteur do est.
-    </p>
+    <div class='mb-32'>
+      <h2 class='mb-16 text-xl font-bold'>Cool features</h2>
+      <div class='grid grid-cols-[1fr_2fr] gap-24'>
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <Picture
+          src={mealAppFt1}
+          alt='meal app feature 1'
+          widths={[706]}
+          aspectRatio='706:602'
+        />
 
-    <h2 class='text-xl font-bold'>Technical challenges</h2>
-    <p class='mb-6'>
-      Exercitation adipisicing mollit reprehenderit occaecat. Magna voluptate ex
-      voluptate nulla ut consequat ut reprehenderit cillum aute cupidatat eu.
-      Nisi pariatur dolore labore nulla laborum sint occaecat tempor veniam id.
-      In excepteur elit ut fugiat veniam. Do nulla pariatur ullamco elit aute
-      est sit ad sit irure qui nisi qui. Velit do nostrud tempor occaecat minim
-      commodo excepteur magna sint consequat sunt fugiat. Cillum magna ea ipsum
-      consectetur.
-    </p>
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <Picture
+          src={mealAppFt2}
+          alt='meal app feature 2'
+          widths={[706]}
+          aspectRatio='706:602'
+        />
 
-    <h2 class='text-xl font-bold'>Drawbacks?</h2>
-    <p class='mb-6'>
-      Ad qui aute aliquip non laborum ipsum dolor amet aliquip. Quis anim sunt
-      officia aliqua duis nostrud proident enim exercitation eiusmod. Anim
-      tempor id ullamco excepteur cupidatat enim laborum magna dolore.
-    </p>
-  </p>
-</Layout>
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <Picture
+          src={mealAppFt3}
+          alt='meal app feature 3'
+          widths={[706]}
+          aspectRatio='706:602'
+        />
+
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <img src={addGif.src} alt='' />
+
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <Picture
+          src={mealAppFt5}
+          alt='meal app feature 5'
+          widths={[706]}
+          aspectRatio='706:602'
+        />
+
+        <p>
+          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
+          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
+          Aliqua minim labore velit excepteur labore exercitation dolore esse
+          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
+          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
+          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
+          quis.
+        </p>
+        <Picture
+          src={mealAppFt6}
+          alt='meal app feature 6'
+          widths={[706]}
+          aspectRatio='706:602'
+        />
+      </div>
+    </div>
+
+    <div class='flex gap-16 mb-32'>
+      <div class='basis-2/5'>
+        <Picture
+          src={searchFilter}
+          alt='search and filter'
+          widths={[460]}
+          aspectRatio='460:712'
+        />
+      </div>
+      <div class='basis-3/5'>
+        <h2 class='mb-16 text-xl font-bold'>Technical challenges</h2>
+        <p class='mb-20'>
+          Esse do dolore consequat officia et duis officia ea incididunt. Elit
+          anim excepteur consectetur esse reprehenderit fugiat Lorem
+          exercitation do incididunt Lorem pariatur nulla. Culpa incididunt
+          labore excepteur et aute duis nisi sit. Cupidatat eu officia minim sit
+          veniam consectetur ullamco tempor ullamco velit sit in laborum
+          nostrud. Voluptate proident ipsum mollit ad nostrud. Tempor eu culpa
+          amet sint aliquip commodo. Occaecat minim ea ullamco eu. Amet cillum
+          ex Lorem officia nisi in et proident excepteur exercitation elit
+          deserunt. Laborum magna duis nisi ut deserunt pariatur mollit. Aliqua
+          culpa ullamco qui proident incididunt dolore fugiat do eu amet esse
+          esse.
+        </p>
+        <p>
+          Laboris reprehenderit incididunt cupidatat laborum proident magna
+          laboris qui pariatur dolor non do eiusmod. Magna id amet ut enim
+          consequat exercitation ad anim anim consequat Lorem ex. Elit nisi
+          irure voluptate dolore cillum consequat. Sit ex aute est ea pariatur
+          enim do in enim ut. Culpa exercitation magna labore amet labore est
+          mollit sint fugiat. Do sint occaecat ullamco quis voluptate nostrud
+          duis velit non veniam. Duis eiusmod nulla deserunt aute amet proident
+          mollit consequat aute sint consectetur sint dolor.
+        </p>
+      </div>
+    </div>
+
+    <div class='flex mb-20'>
+      <p class='basis-1/2'>
+        Ut in eu anim Lorem duis aliquip. Do enim laboris eiusmod voluptate
+        nulla laboris tempor. Non dolor culpa irure anim ea. Qui sunt minim
+        nulla esse aliquip id anim incididunt magna. Voluptate id commodo fugiat
+        velit consequat commodo eu aliquip eiusmod cupidatat veniam officia
+        labore qui. Voluptate reprehenderit laborum culpa ullamco in velit ut
+        duis. Laborum nostrud amet cillum ipsum anim consectetur.
+      </p>
+      <div class='basis-1/2'>
+        <Picture
+          src={ingredientOptions}
+          alt='ingredient options'
+          widths={[746]}
+          aspectRatio='746:322'
+        />
+      </div>
+    </div>
+
+    <div class='mb-32'>
+      <p class='mb-20 max-w-3xl'>
+        Eiusmod esse minim ipsum culpa fugiat proident non adipisicing occaecat.
+        Consequat dolore id ullamco nostrud consequat fugiat. Qui pariatur
+        eiusmod eu commodo id. Magna qui qui quis commodo dolore incididunt
+        minim elit. Adipisicing laboris labore sit ipsum adipisicing aute quis
+        voluptate. Ex et qui nisi irure laboris sint velit exercitation
+        consectetur adipisicing elit.
+      </p>
+      <p class='max-w-3xl'>
+        Excepteur ea pariatur aute adipisicing excepteur ex nulla ad
+        reprehenderit nulla velit exercitation. Nostrud pariatur aute mollit
+        occaecat ullamco tempor. Deserunt consequat ad incididunt mollit anim
+        velit cupidatat commodo adipisicing enim laborum aliqua in. Dolore
+        laboris ea et voluptate cupidatat incididunt fugiat consequat nisi irure
+        ad elit mollit. Enim id minim aliqua pariatur ex ad nisi deserunt
+        nostrud dolor dolor ullamco nulla do. Nulla quis irure amet irure esse
+        enim officia do duis. Reprehenderit deserunt cupidatat quis sit est
+        aliqua laboris.
+      </p>
+    </div>
+
+    <div class='flex gap-24 mb-32'>
+      <div>
+        <h3 class='mb-16 text-lg font-semibold'>
+          Spotlight: &lt;datalist&gt; element
+        </h3>
+        <p class='mb-6'>
+          Ex aliqua in eiusmod incididunt fugiat voluptate quis ad. Mollit
+          occaecat commodo in ut officia incididunt. Veniam voluptate pariatur
+          ad enim mollit. Esse aliquip incididunt sunt esse magna culpa
+          excepteur eu proident nulla amet irure elit officia. Fugiat commodo
+          consequat incididunt reprehenderit. Velit velit ipsum ipsum irure in
+          nisi Lorem tempor ad ullamco. Officia ea ex officia ut excepteur do
+          est.
+        </p>
+      </div>
+      <Picture
+        src={datalist}
+        alt='datalist element'
+        widths={[461]}
+        aspectRatio='461:382'
+      />
+    </div>
+
+    <div class='[grid-column:2] flex justify-center gap-24 mb-40'>
+      <div>
+        <SiteLink url='#' />
+      </div>
+      <div>
+        <GithubLink url='#' />
+      </div>
+    </div>
+  </div>
+</ProjectLayout>

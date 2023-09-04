@@ -1,0 +1,13 @@
+---
+import ProjectLink from './ProjectLink.astro'
+import worldIcon from '../../images/world.svg'
+
+const { url } = Astro.props
+---
+
+<ProjectLink
+  image={worldIcon}
+  imageAlt='world icon'
+  url={url}
+  text='Visit Site'
+/>

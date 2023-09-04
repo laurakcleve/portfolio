@@ -12,23 +12,26 @@ const { title, description, image, url } = Astro.props
 ---
 
 <!-- Picture sizes, widths, ratio, all placeholders for now -->
-<div class='mb-24 last:mb-0 flex flex-wrap'>
-  <div class='mb-4 sm:basis-3/5 pr-8'>
-    <h3 class='mb-4 text-xl font-semibold'>{title}</h3>
-    <p class='mb-4 md:mb-8'>
-      {description}
-    </p>
-    <a href={url} class='text-xs font-bold uppercase'>View Project &rsaquo;</a>
-  </div>
-  <div class='sm:basis-2/5'>
-    <Picture
-      src={image}
-      widths={[600]}
-      alt='nemesis-ai-screenshot'
-      aspectRatio='3:2'
-      sizes='(max-width: 800px) 100vw, 800px'
-      class='rounded-lg'
-    />
-  </div>
+<div class='mb-24 last:mb-0'>
+  <a href={url} class='flex flex-wrap group'>
+    <div class='mb-4 sm:basis-3/5 pr-8'>
+      <h3 class='mb-4 text-xl font-semibold'>{title}</h3>
+      <p class='mb-4 md:mb-8'>
+        {description}
+      </p>
+      <p class='text-xs font-bold uppercase group-hover:text-orange-400'>
+        View Project &rsaquo;
+      </p>
+    </div>
+    <div class='sm:basis-2/5'>
+      <Picture
+        src={image}
+        widths={[600]}
+        alt='nemesis-ai-screenshot'
+        aspectRatio='3:2'
+        sizes='(max-width: 800px) 100vw, 800px'
+        class='rounded-lg'
+      />
+    </div>
+  </a>
 </div>
-<!-- drop-shadow-[0_12px_20px_rgba(28,30,33,0.9)] -->

@@ -14,13 +14,8 @@ module.exports = {
 				sans: ["DM Sans", ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
-				'background-dark': '#181a1b',
-				'background-light': '#37363a',
+				'background': '#21252a',
 				'text': '#f9f3ff',
-				'gradient-start': '#555c69',
-				'gradient-end': '#584859',
-				'accent-1': '#e6d3ff',
-				'accent-2': '#ffc6a6',
 			}
 		},
 	},

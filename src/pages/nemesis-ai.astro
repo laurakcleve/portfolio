@@ -1,84 +1,218 @@
 ---
 import { Picture } from '@astrojs/image/components'
-import Layout from '../layouts/Layout.astro'
+import ProjectLayout from '../layouts/ProjectLayout.astro'
+import Section from '../components/Section.astro'
+import SiteLink from '../components/project-links/SiteLink.astro'
+import GithubLink from '../components/project-links/GithubLink.astro'
 import screenshotFullWithAnswer from '../images/nemesis-ai/thumbnail.jpg'
+import screenshotMobile from '../images/nemesis-ai/nem-mobile.png'
+import nem1 from '../images/nemesis-ai/nem-1.png'
+import nem1NoBg from '../images/nemesis-ai/nem-1-no-bg.png'
+import nem3 from '../images/nemesis-ai/nem-3.png'
+import nemDoc1 from '../images/nemesis-ai/nem-doc-1.png'
+import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
+import ListItem from '../components/ListItem.astro'
 ---
 
-<Layout title='Nemesis AI | Laura Cleveland'>
-  <h1 class='mt-32 mb-16 text-3xl font-bold'>Nemesis AI</h1>
-  <p class='mb-6 max-w-xl'>
-    Laborum et cillum velit est sit irure voluptate consectetur nostrud aute
-    reprehenderit laboris exercitation voluptate. Aute duis laboris ullamco
-    laborum et fugiat adipisicing nostrud fugiat eu. Officia ut quis ipsum eu.
-  </p>
-  <p class='mb-16 max-w-xl'>
-    Nemesis AI is a bot that I built to answer questions about the rules of the
-    board game <a
-      href='https://awakenrealms.com/games/nemesis/'
-      target='_blank'
-      rel='noopener noreferrer'
-      class='text-teal-500'>Nemesis</a
-    >.
-  </p>
-
-  <h3 class='mb-3 text-lg font-semibold'>Created with</h3>
-  <ul class='mb-16'>
-    <li class='mb-2'>Python</li>
-    <li class='mb-2'>Langchain</li>
-    <li class='mb-2'>OpenAI API</li>
-    <li class='mb-2'>React</li>
-    <li class='mb-2'>Next.js</li>
-    <li class='mb-2'>Tailwind CSS</li>
-  </ul>
-
-  <div class='mb-20'>
-    <a href='' class='mb-20 mr-3 px-4 py-2 bg-slate-500 rounded-full'
-      >Visit Site &rsaquo;</a
-    >
-    <a href='' class='mb-20 px-4 py-2 bg-slate-600 rounded-full'
-      >Github &rsaquo;</a
-    >
+<ProjectLayout title='Nemesis AI | Laura Cleveland'>
+  <div class='[grid-column:2] my-32'>
+    <h1 class='mb-16 text-3xl font-bold'>Nemesis AI</h1>
+    <p class='mb-6 max-w-xl'>
+      Laborum et cillum velit est sit irure voluptate consectetur nostrud aute
+      reprehenderit laboris exercitation voluptate. Aute duis laboris ullamco
+      laborum et fugiat adipisicing nostrud fugiat eu. Officia ut quis ipsum eu.
+    </p>
+    <p class='max-w-xl'>
+      Nemesis AI is a bot that I built to answer questions about the rules of
+      the board game <a
+        href='https://awakenrealms.com/games/nemesis/'
+        target='_blank'
+        rel='noopener noreferrer'
+        class='text-teal-500'>Nemesis</a
+      >.
+    </p>
   </div>
 
-  <Picture
-    src={screenshotFullWithAnswer}
-    alt='screenshot'
-    widths={[600]}
-    aspectRatio='16:9'
-    class='mb-32 rounded-lg'
-  />
+  <div class='[grid-column:2] mb-32'>
+    <div class='flex flex-wrap items-center'>
+      <div class='grow'>
+        <h2 class='mb-8 text-xl font-semibold'>Created with</h2>
+        <!-- <ul class=`list-image-[url(/bullet.svg)]`> -->
+        <ul>
+          <ListItem>Python</ListItem>
+          <ListItem>Langchain</ListItem>
+          <ListItem>OpenAI API</ListItem>
+          <ListItem>React</ListItem>
+          <ListItem>Next.js</ListItem>
+          <ListItem>Tailwind CSS</ListItem>
+        </ul>
+      </div>
 
-  <h2 class='mb-4 text-xl font-bold'>Motivation and purpose</h2>
-  <p class='mb-20'>
-    Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
-    velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum. Est
-    anim esse nulla qui non pariatur nisi enim amet. Enim aliquip excepteur qui
-    sint consequat. In occaecat minim ex deserunt do ut cillum eu magna. Fugiat
-    exercitation Lorem est commodo irure dolore non Lorem. Excepteur magna ex
-    eiusmod adipisicing dolor veniam reprehenderit tempor officia velit. Velit
-    dolor qui consectetur deserunt aliqua non laborum eiusmod ea ea.
-  </p>
-  <h2 class='mb-4 text-xl font-bold'>More of the background?</h2>
-  <p class='mb-20'>
-    Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
-    consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
-    Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
-    excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
-    proident ut sit nisi proident fugiat labore nulla magna. Exercitation irure
-    ex veniam proident cillum consequat est id eu aute dolore eiusmod officia
-    eiusmod.
-  </p>
-  <h2 class='mb-4 text-xl font-bold'>Hurdles</h2>
-  <p class='mb-6'>
-    Dolor dolore minim sunt nisi consequat cillum sint incididunt aute. Officia
-    cillum labore quis ipsum sint laborum aliqua sit sit ipsum ad. Laborum minim
-    duis id irure non nostrud pariatur. Nisi officia deserunt ipsum deserunt
-    veniam eu. Veniam culpa proident consectetur enim Lorem in. Anim aute minim
-    ad ad dolore.
-  </p>
-  <p class='mb-20'>
-    Lorem non velit aliqua proident minim ea elit. Ea enim duis nisi sint id.
-    Laboris eu consectetur cupidatat fugiat sint proident velit consectetur ex
-    sit incididunt eu.
-  </p>
-</Layout>
+      <div class='grow shrink-0'>
+        <div class='mb-12'>
+          <SiteLink url='#' />
+        </div>
+        <div>
+          <GithubLink url='#' />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='[grid-column:2] mb-32'>
+    <!-- <Picture
+      src={nem1}
+      alt='screenshot'
+      widths={[1024]}
+      aspectRatio='1204:890'
+    /> -->
+    <Picture
+      src={nem1NoBg}
+      alt='screenshot'
+      widths={[1024]}
+      aspectRatio='1126:852'
+    />
+  </div>
+
+  <div class='[grid-column:2] mb-32'>
+    <h2 class='mb-10 text-xl font-bold'>Motivation and purpose</h2>
+    <p class='mb-12 max-w-xl'>
+      Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
+      velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum.
+      Est anim esse nulla qui non pariatur nisi enim amet. Enim aliquip
+      excepteur qui sint consequat. In occaecat minim ex deserunt do ut cillum
+      eu magna. Fugiat exercitation Lorem est commodo irure dolore non Lorem.
+      Excepteur magna ex eiusmod adipisicing dolor veniam reprehenderit tempor
+      officia velit. Velit dolor qui consectetur deserunt aliqua non laborum
+      eiusmod ea ea.
+    </p>
+    <p class='max-w-xl'>
+      Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
+      consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
+      Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
+      excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
+      proident ut sit nisi proident fugiat labore nulla magna. Exercitation
+      irure ex veniam proident cillum consequat est id eu aute dolore eiusmod
+      officia eiusmod.
+    </p>
+  </div>
+
+  <div class='[grid-column:2] mb-20'>
+    <div class='flex gap-16 lg:gap-24 flex-wrap lg:flex-nowrap lg:flex-row'>
+      <div class='sm:basis-2/3 md:basis-3/5 lg:basis-1/2'>
+        <Picture
+          src={screenshotMobile}
+          alt='screenshot'
+          widths={[1024]}
+          aspectRatio='593:694'
+          class='rounded-2xl'
+        />
+      </div>
+
+      <div class='lg:basis-1/2'>
+        <h2 class='mb-4 text-xl font-bold'>Features</h2>
+        <p class='mb-6'>
+          Dolor dolore minim sunt nisi consequat cillum sint incididunt aute.
+          Officia cillum labore quis ipsum sint laborum aliqua sit sit ipsum ad.
+          Laborum minim duis id irure non nostrud pariatur. Nisi officia
+          deserunt veniam eu. Veniam culpa proident consectetur enim Lorem in.
+          Anim aute minim ad ad dolore.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class='[grid-column:2] mb-20'>
+    <p class='max-w-2xl'>
+      Culpa enim commodo ipsum proident sint aliqua dolor. Minim est enim cillum
+      sit id proident consectetur ea deserunt irure aute mollit ex. Non
+      exercitation deserunt occaecat tempor est ipsum. Pariatur voluptate
+      exercitation minim amet elit fugiat sit nostrud officia exercitation
+      eiusmod. Excepteur exercitation id Lorem ut in tempor anim aliqua dolor
+      aliquip adipisicing non enim duis.
+    </p>
+  </div>
+
+  <div class='[grid-column:2] mb-20'>
+    <Picture
+      src={nem3}
+      alt='screenshot'
+      widths={[1024]}
+      aspectRatio='1204:694'
+      class='rounded-2xl'
+    />
+  </div>
+
+  <div class='[grid-column:2] mb-32'>
+    <h2 class='mb-10 text-xl font-bold'>Challenges</h2>
+    <p class='mb-12 max-w-xl'>
+      Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
+      velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum.
+      Est anim esse nulla qui non pariatur nisi enim amet. Enim aliquip
+      excepteur qui sint consequat. In occaecat minim ex deserunt do ut cillum
+      eu magna. Fugiat exercitation Lorem est commodo irure dolore non Lorem.
+      Excepteur magna ex eiusmod adipisicing dolor veniam reprehenderit tempor
+      officia velit. Velit dolor qui consectetur deserunt aliqua non laborum
+      eiusmod ea ea.
+    </p>
+    <p class='max-w-xl'>
+      Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
+      consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
+      Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
+      excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
+      proident ut sit nisi proident fugiat labore nulla magna. Exercitation
+      irure ex veniam proident cillum consequat est id eu aute dolore eiusmod
+      officia eiusmod.
+    </p>
+  </div>
+
+  <div class='[grid-column:2] flex gap-14 mb-32'>
+    <div class='basis-2/3'>
+      <Picture
+        src={nemDoc1}
+        alt='screenshot'
+        widths={[618]}
+        aspectRatio='618:694'
+        class='rounded-2xl'
+      />
+    </div>
+
+    <div class='basis-1/2'>
+      <h2 class='mb-10 text-xl font-bold'>Documenting the process</h2>
+      <p class='mb-12 max-w-xl'>
+        Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit
+        velit velit aute nisi voluptate. Cillum anim sint tempor nulla officia
+        cillum. Est anim esse nulla qui non pariatur nisi enim amet. Enim
+        aliquip excepteur qui sint consequat. In occaecat minim ex deserunt do
+        ut cillum eu magna. Fugiat exercitation Lorem est commodo irure dolore
+        non Lorem. Excepteur magna ex eiusmod adipisicing dolor veniam
+        reprehenderit tempor officia velit. Velit dolor qui consectetur deserunt
+        aliqua non laborum eiusmod ea ea.
+      </p>
+      <p class='max-w-xl'>
+        Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim
+        labore consectetur id do ipsum dolor proident exercitation. Qui
+        adipisicing ut Lorem nostrud enim proident ex.
+      </p>
+    </div>
+  </div>
+
+  <div class='[grid-column:2] mb-40'>
+    <Picture
+      src={nemDoc2}
+      alt='screenshot'
+      widths={[1024]}
+      aspectRatio='1202:803'
+      class='rounded-2xl'
+    />
+  </div>
+
+  <div class='[grid-column:2] flex justify-center gap-24 mb-40'>
+    <div>
+      <SiteLink url='#' />
+    </div>
+    <div>
+      <GithubLink url='#' />
+    </div>
+  </div>
+</ProjectLayout>

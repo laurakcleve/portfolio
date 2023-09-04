@@ -1,0 +1,13 @@
+---
+import ProjectLink from './ProjectLink.astro'
+import githubIcon from '../../images/github.svg'
+
+const { url } = Astro.props
+---
+
+<ProjectLink
+  image={githubIcon}
+  imageAlt='Github icon'
+  url={url}
+  text='Github'
+/>

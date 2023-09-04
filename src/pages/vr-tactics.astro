@@ -1,7 +1,14 @@
 ---
+import Section from '../components/Section.astro'
 import Layout from '../layouts/Layout.astro'
+import gif from '/creepybug.mp4'
 ---
 
 <Layout title='VR Tactics | Laura Cleveland'>
-  <h1>VR Tactics</h1>
+  <Section>
+    <h1>VR Tactics</h1>
+    <video autoplay muted class='w-1/2'
+      ><source src={gif} type='video/mp4' /></video
+    >
+  </Section>
 </Layout>
