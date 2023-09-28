@@ -3,16 +3,13 @@ import { Picture } from '@astrojs/image/components'
 
 import ProjectLayout from '../layouts/ProjectLayout.astro'
 import thumbnail from '../images/meal-app/thumbnail.jpg'
-import dishImg from '../images/meal-app/dish.png'
 import addGif from '../images/meal-app/purchase-item-add.gif'
-import Section from '../components/Section.astro'
 import ListItem from '../components/ListItem.astro'
 import SiteLink from '../components/project-links/SiteLink.astro'
 import GithubLink from '../components/project-links/GithubLink.astro'
 import mealAppFt1 from '../images/meal-app/mealapp-ft-1.png'
 import mealAppFt2 from '../images/meal-app/mealapp-ft-2.png'
 import mealAppFt3 from '../images/meal-app/mealapp-ft-3.png'
-import mealAppFt4 from '../images/meal-app/mealapp-ft-4.png'
 import mealAppFt5 from '../images/meal-app/mealapp-ft-5.png'
 import mealAppFt6 from '../images/meal-app/mealapp-ft-6.png'
 import searchFilter from '../images/meal-app/search-filter.png'
@@ -25,12 +22,11 @@ import datalist from '../images/meal-app/datalist.png'
     <div class='my-32'>
       <h1 class='mb-16 text-3xl font-bold'>Meal app</h1>
       <p class='mb-6 max-w-xl'>
-        Magna duis adipisicing sunt sit occaecat ut ipsum aute id non deserunt
-        amet. Culpa enim ea in duis sint eiusmod dolore. Est amet eiusmod mollit
-        veniam non. Adipisicing quis aliquip dolore veniam fugiat enim labore
-        veniam consequat excepteur.
+        This app was built to be a meal planning assistant. It keeps an
+        inventory of your food, a list of your own recipes, and your grocery
+        purchases. This project has been a great way for me to try out new
+        technologies and has gone through several iterations over the years.
       </p>
-      <p class='mb-6'>Don't forget to make properly sized images.</p>
     </div>
 
     <div class='mb-10'>
@@ -85,19 +81,27 @@ import datalist from '../images/meal-app/datalist.png'
     <div class='mb-32'>
       <h2 class='mb-16 text-xl font-bold'>Background and goal</h2>
       <p class='mb-16 max-w-2xl'>
-        Esse consectetur ad esse ex cillum voluptate sunt quis enim enim dolore
-        proident fugiat Lorem. Ipsum aute ullamco proident non laborum minim
-        culpa duis proident irure ad quis. Minim consectetur elit aute excepteur
-        occaecat quis dolore aliquip cillum aliquip minim. Qui magna incididunt
-        cupidatat esse incididunt commodo ea minim veniam. Laboris voluptate
-        officia in elit eu officia laboris incididunt ut esse commodo voluptate.
-        Laboris voluptate dolor aliquip consectetur ut esse qui. Reprehenderit
-        aliqua commodo cillum consequat excepteur esse.
+        I used to be terrible at figuring out what to cook on the spot. I’d end
+        up in a last-minute scramble every single day, and it was a huge source
+        of stress for me. I became obsessed with avoiding that stress, and dove
+        deep into meal planning. I planned out every meal as far in advance as I
+        could and made sure I had maximum variety from day to day. I ended up
+        constantly buying ingredients for every dish under the sun, and I
+        couldn’t keep track of them and use them up in time. Things went bad,
+        and I’d kick myself for it.
       </p>
       <p class='max-w-2xl'>
-        Elit cupidatat reprehenderit proident ea voluptate cupidatat duis ad
-        ullamco. Ullamco commodo minim dolor ullamco id nisi. Laboris minim amet
-        tempor tempor.
+        The obvious solution to me was, “I need a database of every food item in
+        my house.” And almost immediately I started having big dreams of how
+        everything could fit into a system that could tell me anything I wanted
+        to know. What can I make that doesn't use chicken, and isn't a soup,
+        that I haven't had for a while? What do I need to use out of the fridge
+        ASAP, and what can I make with it? Have I been spending too much on eggs
+        when I could be buying them cheaper elsewhere? More important than all
+        of these questions was how I could do more with less. I was spending so
+        much time and energy on perfecting my process and I wanted everything to
+        be automated. I wanted to be able to switch my brain off and, ideally,
+        create something that could do it all better than I could.
       </p>
     </div>
 
@@ -105,13 +109,12 @@ import datalist from '../images/meal-app/datalist.png'
       <h2 class='mb-16 text-xl font-bold'>Cool features</h2>
       <div class='grid grid-cols-[1fr_2fr] gap-24'>
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          You can add your recipes and their ingredients to a list of meals, and
+          sort them by the date you last used them, which is helpful in keeping
+          a rotation. To that end, you can tag dishes that you want to be active
+          in your rotation, so if you have meals that you don’t want as often,
+          you can filter them out. All dishes can be filtered by categories/tags
+          that are created by you.
         </p>
         <Picture
           src={mealAppFt1}
@@ -121,13 +124,8 @@ import datalist from '../images/meal-app/datalist.png'
         />
 
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          The categories can be filtered by matching any of the selected
+          categories, or all of them (i.e. an OR filter or an AND filter).
         </p>
         <Picture
           src={mealAppFt2}
@@ -137,13 +135,8 @@ import datalist from '../images/meal-app/datalist.png'
         />
 
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          For each dish, you can see which of the ingredients you have and don’t
+          have.
         </p>
         <Picture
           src={mealAppFt3}
@@ -153,24 +146,17 @@ import datalist from '../images/meal-app/datalist.png'
         />
 
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          When entering in purchase items, the form remembers details about the
+          current item that you’ve previously entered and autofills them for
+          you.
         </p>
         <img src={addGif.src} alt='' />
 
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          An item’s details page shows you its average price based on your
+          purchase history, as well as the average price for each location you
+          purchased it at. This helps you stay informed about your cost
+          efficiency.
         </p>
         <Picture
           src={mealAppFt5}
@@ -180,13 +166,9 @@ import datalist from '../images/meal-app/datalist.png'
         />
 
         <p>
-          Eiusmod mollit elit reprehenderit tempor commodo eiusmod proident.
-          Reprehenderit elit Lorem mollit culpa. Magna ea anim aliquip magna.
-          Aliqua minim labore velit excepteur labore exercitation dolore esse
-          cillum. Lorem ex dolor ad dolor id aliquip. Aliquip aliquip do duis ea
-          aliquip commodo ut duis nisi dolore sint sunt amet sunt. Cupidatat
-          culpa nulla voluptate ut amet laboris officia nulla do ut laborum
-          quis.
+          The inventory helps you reduce your food waste and use your items
+          efficiently by sorting by expiration dates and listing dishes that
+          each item can be used in.
         </p>
         <Picture
           src={mealAppFt6}
@@ -195,6 +177,41 @@ import datalist from '../images/meal-app/datalist.png'
           aspectRatio='706:602'
         />
       </div>
+    </div>
+
+    <div class='flex mb-12'>
+      <p class='basis-1/2 pr-12'>
+        The ingredients in dishes have a great deal of flexibility. You can make
+        things optional, list substitutes, and specify another ingredient that
+        this item “counts as” (e.g. your sandwich dish has “cheese” as an
+        ingredient, but you have “cheddar cheese” in your fridge; for this
+        situation you can make cheddar cheese fulfill the requirement for
+        “cheese”). Substitutes like that are taken into account when filtering
+        dishes on whether or not you have all the required ingredients.
+      </p>
+      <div class='basis-1/2'>
+        <Picture
+          src={ingredientOptions}
+          alt='ingredient options'
+          widths={[746]}
+          aspectRatio='746:322'
+        />
+      </div>
+    </div>
+    <div class='mb-32'>
+      <p class='mb-12 max-w-3xl'>
+        Additionally, you can use other dishes as ingredients. This is helpful
+        for things like homemade sauces that go into different things, or other
+        meals that are assembled, like sandwiches or burrito bowls. It was
+        essential to include this feature in order to avoid messy duplicates
+        across dishes and ingredients and to keep the data more true to its
+        source.
+      </p>
+      <p class='mb-12 max-w-3xl'>
+        These functionalities drastically changed the original database design
+        and added a significant amount of complexity to the business logic, but
+        greatly increased the overall usefulness of the system.
+      </p>
     </div>
 
     <div class='flex gap-16 mb-32'>
@@ -209,85 +226,55 @@ import datalist from '../images/meal-app/datalist.png'
       <div class='basis-3/5'>
         <h2 class='mb-16 text-xl font-bold'>Technical challenges</h2>
         <p class='mb-20'>
-          Esse do dolore consequat officia et duis officia ea incididunt. Elit
-          anim excepteur consectetur esse reprehenderit fugiat Lorem
-          exercitation do incididunt Lorem pariatur nulla. Culpa incididunt
-          labore excepteur et aute duis nisi sit. Cupidatat eu officia minim sit
-          veniam consectetur ullamco tempor ullamco velit sit in laborum
-          nostrud. Voluptate proident ipsum mollit ad nostrud. Tempor eu culpa
-          amet sint aliquip commodo. Occaecat minim ea ullamco eu. Amet cillum
-          ex Lorem officia nisi in et proident excepteur exercitation elit
-          deserunt. Laborum magna duis nisi ut deserunt pariatur mollit. Aliqua
-          culpa ullamco qui proident incididunt dolore fugiat do eu amet esse
-          esse.
+          In a couple of places in the app you have a big list of items or
+          dishes that you can manipulate in different ways: you can sort it by
+          different fields, you can apply filters, and you can do a search. You
+          want these all to be applied at once; for instance if you have a
+          filter active, you want to be able to search within the filtered
+          results. It was a really tricky thing to implement, particularly with
+          handling state and the filtered copy of the original data. When I
+          tried to do multiple things with the list, running different sorts and
+          filters on this state variable, I very quickly got into infinite
+          rerenders. There’s probably a much better way to solve this, but I
+          ended up using a single useEffect that runs on every search and every
+          filter change and sorting change, and checks against each of them.
         </p>
         <p>
-          Laboris reprehenderit incididunt cupidatat laborum proident magna
-          laboris qui pariatur dolor non do eiusmod. Magna id amet ut enim
-          consequat exercitation ad anim anim consequat Lorem ex. Elit nisi
-          irure voluptate dolore cillum consequat. Sit ex aute est ea pariatur
-          enim do in enim ut. Culpa exercitation magna labore amet labore est
-          mollit sint fugiat. Do sint occaecat ullamco quis voluptate nostrud
-          duis velit non veniam. Duis eiusmod nulla deserunt aute amet proident
-          mollit consequat aute sint consectetur sint dolor.
+          Another challenge I ran into was handling dates. Using gqlgen, your
+          models are generated from your schema and they’re strongly typed. So
+          dates coming back from the database as a date type must be a string in
+          the resolvers, and you need to decide how you want that string
+          formatted, whether it’s the number of milliseconds or something else.
+          I messed around with changing the data type in different places, and
+          each caused its own set of problems. In the end I modified my queries
+          to cast the dates to text, so the conversion is made as early as
+          possible. This has worked out for me so far, but I'll be keeping it in
+          mind during future changes that might cause data loss or other
+          problems.
         </p>
       </div>
     </div>
 
-    <div class='flex mb-20'>
-      <p class='basis-1/2'>
-        Ut in eu anim Lorem duis aliquip. Do enim laboris eiusmod voluptate
-        nulla laboris tempor. Non dolor culpa irure anim ea. Qui sunt minim
-        nulla esse aliquip id anim incididunt magna. Voluptate id commodo fugiat
-        velit consequat commodo eu aliquip eiusmod cupidatat veniam officia
-        labore qui. Voluptate reprehenderit laborum culpa ullamco in velit ut
-        duis. Laborum nostrud amet cillum ipsum anim consectetur.
-      </p>
-      <div class='basis-1/2'>
-        <Picture
-          src={ingredientOptions}
-          alt='ingredient options'
-          widths={[746]}
-          aspectRatio='746:322'
-        />
-      </div>
-    </div>
-
-    <div class='mb-32'>
-      <p class='mb-20 max-w-3xl'>
-        Eiusmod esse minim ipsum culpa fugiat proident non adipisicing occaecat.
-        Consequat dolore id ullamco nostrud consequat fugiat. Qui pariatur
-        eiusmod eu commodo id. Magna qui qui quis commodo dolore incididunt
-        minim elit. Adipisicing laboris labore sit ipsum adipisicing aute quis
-        voluptate. Ex et qui nisi irure laboris sint velit exercitation
-        consectetur adipisicing elit.
-      </p>
-      <p class='max-w-3xl'>
-        Excepteur ea pariatur aute adipisicing excepteur ex nulla ad
-        reprehenderit nulla velit exercitation. Nostrud pariatur aute mollit
-        occaecat ullamco tempor. Deserunt consequat ad incididunt mollit anim
-        velit cupidatat commodo adipisicing enim laborum aliqua in. Dolore
-        laboris ea et voluptate cupidatat incididunt fugiat consequat nisi irure
-        ad elit mollit. Enim id minim aliqua pariatur ex ad nisi deserunt
-        nostrud dolor dolor ullamco nulla do. Nulla quis irure amet irure esse
-        enim officia do duis. Reprehenderit deserunt cupidatat quis sit est
-        aliqua laboris.
-      </p>
-    </div>
-
-    <div class='flex gap-24 mb-32'>
-      <div>
+    <div class='flex mb-32'>
+      <div class='basis-2/3'>
         <h3 class='mb-16 text-lg font-semibold'>
           Spotlight: &lt;datalist&gt; element
         </h3>
         <p class='mb-6'>
-          Ex aliqua in eiusmod incididunt fugiat voluptate quis ad. Mollit
-          occaecat commodo in ut officia incididunt. Veniam voluptate pariatur
-          ad enim mollit. Esse aliquip incididunt sunt esse magna culpa
-          excepteur eu proident nulla amet irure elit officia. Fugiat commodo
-          consequat incididunt reprehenderit. Velit velit ipsum ipsum irure in
-          nisi Lorem tempor ad ullamco. Officia ea ex officia ut excepteur do
-          est.
+          When you're inputting an ingredient in a recipe, or logging the
+          purchase of an item, you want that item to be from the single source
+          of items that already exist. You don't want to have a bunch of names
+          that mean the same thing. "cheese", "cheddar cheese", "cheese,
+          cheddar". That sort of thing. You want to essentially pick from a
+          list. But when your list of every item ever gets in the hundreds, you
+          really don't want to have to scroll through a dropdown. A
+          &lt;datalist&gt; was an ideal solution for this problem because you
+          can just type in what you're looking for and see what already exists.
+          The other key benefit is that if you need to add a new item, you're
+          not restricted to the available options, the way you would be with a
+          &lt;select&gt;. You can enter in the new name as with a regular input,
+          and the app will add that item to the database along with whatever
+          dish or purchase item you're creating.
         </p>
       </div>
       <Picture
@@ -295,6 +282,7 @@ import datalist from '../images/meal-app/datalist.png'
         alt='datalist element'
         widths={[461]}
         aspectRatio='461:382'
+        class='basis-1/3'
       />
     </div>
 
