@@ -17,12 +17,7 @@ import ListItem from '../components/ListItem.astro'
 <ProjectLayout title='Nemesis AI | Laura Cleveland'>
   <div class='[grid-column:2] my-32'>
     <h1 class='mb-16 text-3xl font-bold'>Nemesis AI</h1>
-    <p class='mb-6 max-w-xl'>
-      Laborum et cillum velit est sit irure voluptate consectetur nostrud aute
-      reprehenderit laboris exercitation voluptate. Aute duis laboris ullamco
-      laborum et fugiat adipisicing nostrud fugiat eu. Officia ut quis ipsum eu.
-    </p>
-    <p class='max-w-xl'>
+    <p class='mb-10 max-w-xl'>
       Nemesis AI is a bot that I built to answer questions about the rules of
       the board game <a
         href='https://awakenrealms.com/games/nemesis/'
@@ -30,6 +25,11 @@ import ListItem from '../components/ListItem.astro'
         rel='noopener noreferrer'
         class='text-teal-500'>Nemesis</a
       >.
+    </p>
+    <p class='max-w-xl'>
+      The project is a two-part system: the Python scripts that build an index
+      from the rules of the game, and the Next app that provides the interface
+      and feeds GPT the parts of the index it needs to answer user questions.
     </p>
   </div>
 
@@ -77,23 +77,22 @@ import ListItem from '../components/ListItem.astro'
   <div class='[grid-column:2] mb-32'>
     <h2 class='mb-10 text-xl font-bold'>Motivation and purpose</h2>
     <p class='mb-12 max-w-xl'>
-      Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
-      velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum.
-      Est anim esse nulla qui non pariatur nisi enim amet. Enim aliquip
-      excepteur qui sint consequat. In occaecat minim ex deserunt do ut cillum
-      eu magna. Fugiat exercitation Lorem est commodo irure dolore non Lorem.
-      Excepteur magna ex eiusmod adipisicing dolor veniam reprehenderit tempor
-      officia velit. Velit dolor qui consectetur deserunt aliqua non laborum
-      eiusmod ea ea.
+      The emergence of new AI tools has been a great opportunity for me to
+      explore different corners of programming and find new things to bring into
+      web development.
     </p>
     <p class='max-w-xl'>
-      Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
-      consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
-      Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
-      excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
-      proident ut sit nisi proident fugiat labore nulla magna. Exercitation
-      irure ex veniam proident cillum consequat est id eu aute dolore eiusmod
-      officia eiusmod.
+      I started trying to create a chatbot with a custom knowledge base by using
+      GPT Index, now Llama index. It’s a library that does most of the heavy
+      lifting in creating your index and querying it. I tried it out with a
+      collection of markdown files that were the content of a blog, but there
+      was a lot going on behind the scenes that I didn’t understand. I struggled
+      through some projects where I did everything from scratch, which helped me
+      learn the mechanisms way better. I refined my techniques over a few
+      different iterations of question-answering tools, and after building this
+      app, I feel more confident going back and learning the more robust tooling
+      out there. I better understand the tradeoffs of different ones, and can
+      make more informed decisions about which to use for different situations.
     </p>
   </div>
 
@@ -112,11 +111,11 @@ import ListItem from '../components/ListItem.astro'
       <div class='lg:basis-1/2'>
         <h2 class='mb-4 text-xl font-bold'>Features</h2>
         <p class='mb-6'>
-          Dolor dolore minim sunt nisi consequat cillum sint incididunt aute.
-          Officia cillum labore quis ipsum sint laborum aliqua sit sit ipsum ad.
-          Laborum minim duis id irure non nostrud pariatur. Nisi officia
-          deserunt veniam eu. Veniam culpa proident consectetur enim Lorem in.
-          Anim aute minim ad ad dolore.
+          The format for the system is a single question and answer, as is
+          pretty common for tools like those that let you ask questions about a
+          podcast series or YouTube channel. This keeps the UI simple and the
+          text generation output more predictable, but with GPT it’s possible to
+          implement a continuous conversation as well.
         </p>
       </div>
     </div>
@@ -124,12 +123,15 @@ import ListItem from '../components/ListItem.astro'
 
   <div class='[grid-column:2] mb-20'>
     <p class='max-w-2xl'>
-      Culpa enim commodo ipsum proident sint aliqua dolor. Minim est enim cillum
-      sit id proident consectetur ea deserunt irure aute mollit ex. Non
-      exercitation deserunt occaecat tempor est ipsum. Pariatur voluptate
-      exercitation minim amet elit fugiat sit nostrud officia exercitation
-      eiusmod. Excepteur exercitation id Lorem ut in tempor anim aliqua dolor
-      aliquip adipisicing non enim duis.
+      The app is simple and straightforward, but one extra thing I added for my
+      own sanity was a debugging log. During development I quickly found that
+      debugging LLM inputs and outputs was a whole different beast than
+      debugging I had done for any kind of project I'd done before. The logs
+      usually consist of large amounts of text that are hard to parse at a
+      glance, and the outputs aren’t deterministic. I added a little modal that
+      logs out the data for the current answer. It shows the parts of the source
+      material that matched the similarity search, as well as the sections that
+      were sent to the API as context for the answer.
     </p>
   </div>
 
@@ -146,23 +148,24 @@ import ListItem from '../components/ListItem.astro'
   <div class='[grid-column:2] mb-32'>
     <h2 class='mb-10 text-xl font-bold'>Challenges</h2>
     <p class='mb-12 max-w-xl'>
-      Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit velit
-      velit aute nisi voluptate. Cillum anim sint tempor nulla officia cillum.
-      Est anim esse nulla qui non pariatur nisi enim amet. Enim aliquip
-      excepteur qui sint consequat. In occaecat minim ex deserunt do ut cillum
-      eu magna. Fugiat exercitation Lorem est commodo irure dolore non Lorem.
-      Excepteur magna ex eiusmod adipisicing dolor veniam reprehenderit tempor
-      officia velit. Velit dolor qui consectetur deserunt aliqua non laborum
-      eiusmod ea ea.
+      I ran headlong into the ever-persistent problem of LLMs: accuracy. The
+      process of question-answering with a custom knowledge base at its most
+      basic is pretty straightforward, but the results can be all over the place
+      and it can be extremely difficult to get consistent, accurate answers.
     </p>
     <p class='max-w-xl'>
-      Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim labore
-      consectetur id do ipsum dolor proident exercitation. Qui adipisicing ut
-      Lorem nostrud enim proident ex. Anim minim laborum consequat aliqua ex
-      excepteur et elit anim fugiat occaecat ut. Consectetur incididunt ipsum
-      proident ut sit nisi proident fugiat labore nulla magna. Exercitation
-      irure ex veniam proident cillum consequat est id eu aute dolore eiusmod
-      officia eiusmod.
+      I had some difficulty with the common method of retrieval where you use a
+      similarity search to retrieve chunks from your data, and feed some number
+      of those to the completion model. At first I was having trouble retrieving
+      the right information from the source material. I needed to have it split
+      into large chunks, to include enough surrounding context, but the
+      retrieval method works by selecting chunks based on how similar they are
+      to the user’s question. Such large chunks meant that lots of them matched
+      the question just as well as others that were more relevant. The context
+      passed to the LLM was So I did an extra retrieval step; I made the chunks
+      small enough that I would get the most relevant ones, and then I would go
+      and get the larger sections that those chunks came from. This helped my
+      retrieval accuracy and context quality immensely.
     </p>
   </div>
 
@@ -180,19 +183,11 @@ import ListItem from '../components/ListItem.astro'
     <div class='basis-1/2'>
       <h2 class='mb-10 text-xl font-bold'>Documenting the process</h2>
       <p class='mb-12 max-w-xl'>
-        Occaecat ex deserunt qui in. Labore voluptate minim sint veniam elit
-        velit velit aute nisi voluptate. Cillum anim sint tempor nulla officia
-        cillum. Est anim esse nulla qui non pariatur nisi enim amet. Enim
-        aliquip excepteur qui sint consequat. In occaecat minim ex deserunt do
-        ut cillum eu magna. Fugiat exercitation Lorem est commodo irure dolore
-        non Lorem. Excepteur magna ex eiusmod adipisicing dolor veniam
-        reprehenderit tempor officia velit. Velit dolor qui consectetur deserunt
-        aliqua non laborum eiusmod ea ea.
-      </p>
-      <p class='max-w-xl'>
-        Nulla ullamco et nulla quis sit. Proident reprehenderit mollit enim
-        labore consectetur id do ipsum dolor proident exercitation. Qui
-        adipisicing ut Lorem nostrud enim proident ex.
+        I’ve grown more and more fond of keeping notes as I work on a project,
+        and on this project I was the most thorough I’ve been thus far. I like
+        to use Obsidian for my notes and have been trying out their Canvas
+        feature as a new way of laying everything out. I plan to use these notes
+        to put together a blog post on the process.
       </p>
     </div>
   </div>
