@@ -12,16 +12,17 @@ const { title, description, image, url } = Astro.props
 ---
 
 <!-- Picture sizes, widths, ratio, all placeholders for now -->
-<div class='mb-24 last:mb-0'>
+<div class='mb-24 last:mb-0 p-8 sm:p-8 rounded-2xl bg-[#3b4551] shadow-2xl'>
   <a href={url} class='flex flex-wrap group'>
-    <div class='mb-4 sm:basis-3/5 pr-8'>
-      <h3 class='mb-4 text-xl font-semibold'>{title}</h3>
-      <p class='mb-4 md:mb-8'>
+    <div class='sm:basis-3/5 pr-16 flex flex-col'>
+      <h3 class='mb-8 text-xl font-semibold'>{title}</h3>
+      <p>
         {description}
       </p>
-      <p class='text-xs font-bold uppercase group-hover:text-orange-400'>
-        View Project &rsaquo;
-      </p>
+      <button
+        class='mt-auto mr-4 py-4 px-10 w-48 text-xs font-bold uppercase rounded-full bg-slate-500 shadow-lg'
+        >View Project &rsaquo;</button
+      >
     </div>
     <div class='sm:basis-2/5'>
       <Picture
@@ -30,7 +31,7 @@ const { title, description, image, url } = Astro.props
         alt='nemesis-ai-screenshot'
         aspectRatio='3:2'
         sizes='(max-width: 800px) 100vw, 800px'
-        class='rounded-lg'
+        class='rounded-lg shadow-xl'
       />
     </div>
   </a>
