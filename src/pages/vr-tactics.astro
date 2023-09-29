@@ -1,14 +1,67 @@
 ---
+import ListItem from '../components/ListItem.astro'
 import Section from '../components/Section.astro'
+import GithubLink from '../components/project-links/GithubLink.astro'
+import SiteLink from '../components/project-links/SiteLink.astro'
 import Layout from '../layouts/Layout.astro'
-import gif from '/creepyBug.mp4'
+import ProjectLayout from '../layouts/ProjectLayout.astro'
+import demo from '/gameplay-demo.mp4'
+import bug from '/creepyBug.mp4'
 ---
 
-<Layout title='VR Tactics | Laura Cleveland'>
-  <Section>
-    <h1>VR Tactics</h1>
-    <video autoplay muted class='w-1/2'
-      ><source src={gif} type='video/mp4' /></video
-    >
-  </Section>
-</Layout>
+<ProjectLayout title='VR Tactics | Laura Cleveland'>
+  <div class='[grid-column:2] my-32'>
+    <h1 class='mb-16 text-3xl font-bold'>VR Tactics</h1>
+    <p class='mb-10 max-w-xl'>
+      The beginnings of a turn-based tactics game for SteamVR. The combat system
+      includes player- and AI-controlled turns that allow movement and attacks.
+    </p>
+
+    <div class='[grid-column:2] mb-32'>
+      <div class='flex flex-wrap gap-20 border-t border-t-emerald-500 pt-12'>
+        <!-- <div class='grow'> -->
+        <div class=''>
+          <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
+          <ul>
+            <ListItem>Unity</ListItem>
+            <ListItem>C#</ListItem>
+            <ListItem>VRTK (VR Toolkit)</ListItem>
+            <ListItem>Blender</ListItem>
+          </ul>
+        </div>
+
+        <!-- <div class='grow shrink-0'> -->
+        <div class='xs:ml-auto'>
+          <div>
+            <GithubLink url='#' />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='mb-32 rounded-2xl overflow-hidden'>
+      <video autoplay loop muted class='w-full'>
+        <source src={demo} type='video/mp4' />
+      </video>
+    </div>
+
+    <div class='[grid-column:2] mb-32'>
+      <h2 class='mb-10 text-xl font-bold'>Background</h2>
+      <p class='mb-12 max-w-xl'>
+        My husband and I were really hyped for VR when it finally hit the
+        masses. When we got the Vive in 2016, we were excited to find that
+        developing for it was actually pretty accessible to non-professionals.
+        With a new medium, everyone was starved for content, so indie games and
+        experiences were really thriving. We love tactics games, and we thought
+        we could do some really cool and innovative stuff with VR for that type
+        of gameplay. The tooling was very bleeding edge and not optimized for
+        ease of learning and use, but
+      </p>
+      <p class='mb-12 max-w-xl'></p>
+    </div>
+
+    <video autoplay loop muted class='w-1/2'>
+      <source src={bug} type='video/mp4' />
+    </video>
+  </div>
+</ProjectLayout>
