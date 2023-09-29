@@ -1,67 +1,220 @@
 ---
+import { Picture } from '@astrojs/image/components'
+
 import ListItem from '../components/ListItem.astro'
-import Section from '../components/Section.astro'
 import GithubLink from '../components/project-links/GithubLink.astro'
-import SiteLink from '../components/project-links/SiteLink.astro'
-import Layout from '../layouts/Layout.astro'
 import ProjectLayout from '../layouts/ProjectLayout.astro'
+
 import demo from '/gameplay-demo.mp4'
+import featureControls from '../images/vr-tactics/feature-controls.jpg'
+import featurePathfinding from '../images/vr-tactics/feature-pathfinding.jpg'
+import featureAi from '../images/vr-tactics/feature-ai.jpg'
+import featureCancel from '../images/vr-tactics/feature-cancel.jpg'
+import miniTest from '../images/vr-tactics/mini-test.gif'
+import unitychan from '../images/vr-tactics/unitychan.jpg'
+import textures from '../images/vr-tactics/textures.jpg'
+import workflow from '/workflow.mp4'
 import bug from '/creepyBug.mp4'
 ---
 
 <ProjectLayout title='VR Tactics | Laura Cleveland'>
-  <div class='[grid-column:2] my-32'>
-    <h1 class='mb-16 text-3xl font-bold'>VR Tactics</h1>
-    <p class='mb-10 max-w-xl'>
-      The beginnings of a turn-based tactics game for SteamVR. The combat system
-      includes player- and AI-controlled turns that allow movement and attacks.
-    </p>
+  <div class='[grid-column:2]'>
+    <div class='my-32'>
+      <h1 class='mb-16 text-3xl font-bold'>VR Tactics</h1>
+      <p class='mb-10 max-w-xl'>
+        The beginnings of a turn-based tactics game for SteamVR. The combat
+        system includes player- and AI-controlled turns that allow movement and
+        attacks.
+      </p>
 
-    <div class='[grid-column:2] mb-32'>
-      <div class='flex flex-wrap gap-20 border-t border-t-emerald-500 pt-12'>
-        <!-- <div class='grow'> -->
-        <div class=''>
-          <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
-          <ul>
-            <ListItem>Unity</ListItem>
-            <ListItem>C#</ListItem>
-            <ListItem>VRTK (VR Toolkit)</ListItem>
-            <ListItem>Blender</ListItem>
-          </ul>
-        </div>
+      <div class='mb-32'>
+        <div class='flex flex-wrap gap-20 border-t border-t-emerald-500 pt-12'>
+          <!-- <div class='grow'> -->
+          <div class=''>
+            <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
+            <ul>
+              <ListItem>Unity</ListItem>
+              <ListItem>C#</ListItem>
+              <ListItem>VRTK (VR Toolkit)</ListItem>
+              <ListItem>Blender</ListItem>
+            </ul>
+          </div>
 
-        <!-- <div class='grow shrink-0'> -->
-        <div class='xs:ml-auto'>
-          <div>
-            <GithubLink url='#' />
+          <!-- <div class='grow shrink-0'> -->
+          <div class='xs:ml-auto'>
+            <div>
+              <GithubLink url='#' />
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class='mb-32 rounded-2xl overflow-hidden'>
-      <video autoplay loop muted class='w-full'>
-        <source src={demo} type='video/mp4' />
-      </video>
-    </div>
+      <div class='mb-32 rounded-2xl overflow-hidden'>
+        <video autoplay loop muted class='w-full'>
+          <source src={demo} type='video/mp4' />
+        </video>
+      </div>
 
-    <div class='[grid-column:2] mb-32'>
-      <h2 class='mb-10 text-xl font-bold'>Background</h2>
-      <p class='mb-12 max-w-xl'>
-        My husband and I were really hyped for VR when it finally hit the
-        masses. When we got the Vive in 2016, we were excited to find that
-        developing for it was actually pretty accessible to non-professionals.
-        With a new medium, everyone was starved for content, so indie games and
-        experiences were really thriving. We love tactics games, and we thought
-        we could do some really cool and innovative stuff with VR for that type
-        of gameplay. The tooling was very bleeding edge and not optimized for
-        ease of learning and use, but
-      </p>
-      <p class='mb-12 max-w-xl'></p>
-    </div>
+      <div class='mb-32'>
+        <h2 class='mb-10 text-xl font-bold'>Background</h2>
+        <p class='mb-12 max-w-xl'>
+          My husband and I were really hyped for VR when it finally hit the
+          masses. When we got the Vive in 2016, we were excited to find that
+          developing for it was actually pretty accessible to non-professionals.
+          With a new medium, everyone was starved for content, so indie games
+          and experiences were really thriving. We love tactics games, and we
+          thought we could do some really cool and innovative stuff with VR for
+          that type of gameplay. The tooling was very bleeding edge and not
+          optimized for ease of learning and use, but
+        </p>
+      </div>
 
-    <video autoplay loop muted class='w-1/2'>
-      <source src={bug} type='video/mp4' />
-    </video>
+      <div class='mb-32'>
+        <h2 class='mb-16 text-xl font-bold'>Features</h2>
+        <div class='grid grid-cols-[1fr_2fr] gap-24 mb-32'>
+          <p>
+            The controls are anchored to one hand and you point and click with
+            the other, so you can walk around the stage wherever you want and
+            the controls move with you.
+          </p>
+          <Picture
+            src={featureControls}
+            alt='controls feature'
+            widths={[706]}
+            aspectRatio='706:602'
+          />
+
+          <p>
+            The movement uses A* pathfinding to find the shortest path to the
+            destination.
+          </p>
+          <Picture
+            src={featurePathfinding}
+            alt='pathfinding feature'
+            widths={[706]}
+            aspectRatio='706:602'
+          />
+
+          <p>
+            The game alternates between player-controlled units and
+            AI-controlled units, and the AI units move to the nearest enemy and,
+            if in range, attack.
+          </p>
+          <Picture
+            src={featureAi}
+            alt='AI feature'
+            widths={[706]}
+            aspectRatio='706:602'
+          />
+
+          <p>
+            Movements and attacks can be confirmed or cancelled. I added a state
+            machine to more easily handle this functionality.
+          </p>
+          <Picture
+            src={featureCancel}
+            alt='cancel feature'
+            widths={[706]}
+            aspectRatio='706:602'
+          />
+        </div>
+
+        <div class='flex'>
+          <div class='basis-1/2'>
+            <img src={miniTest.src} alt='' />
+          </div>
+          <p class='basis-1/2 pl-12'>
+            I made this mini test game, sans VR, to hammer out the details of
+            the state machine, as well as some unit classes and abilities. I had
+            a lot of fun implementing skills that had different areas of effect.
+          </p>
+        </div>
+      </div>
+
+      <div class='mb-32'>
+        <h2 class='mb-10 text-xl font-bold'>Challenges</h2>
+        <p class='mb-12 max-w-xl'>
+          One of the more difficult and interesting problems was handling
+          asynchronous operations and timed events in a game setting. Beyond the
+          technical trickiness, it required a different way of thinking.
+          Sometimes you have to manually give the player time to process what's
+          happening, and that means waiting an appropriate amount of time
+          between things; waiting for animations to finish, or to trigger a new
+          event. It's particularly important with AI-controlled units; all the
+          actions they take can happen practically instantaneously, but
+          obviously a human needs time to perceive all of that. I spent a lot of
+          time doing real-time testing and tweaking wait times to make sure
+          things felt smooth and responsive.
+        </p>
+        <p class='max-w-xl'>
+          Another difficult lesson for me was deciding what to do and not do on
+          my own in this project. I was really interested in every part of
+          making a game - the 3D modeling, texturing and painting, rigging and
+          animating, creating particle effects, and on and on. I ventured into
+          every area, some only briefly, some for much longer. It was really
+          fun, and I learned a lot, but if I had stuck to making every asset
+          myself, from scratch, I never would have gotten anywhere. This project
+          is a great reminder for me to look for ways I can use resources that
+          exist, and to always evaluate where my time is best spent.
+        </p>
+      </div>
+
+      <div class='flex mb-32'>
+        <div class='basis-2/5'>
+          <Picture
+            src={unitychan}
+            alt='unity-chan'
+            widths={[603]}
+            aspectRatio='603:266'
+            class='pb-12'
+          />
+          <Picture
+            src={textures}
+            alt='unity-chan textures'
+            widths={[573]}
+            aspectRatio='573:581'
+            class='pb-12'
+          />
+          <div class='ml-auto rounded-xl overflow-hidden basis-1/2'>
+            <video autoplay loop muted>
+              <source src={workflow} type='video/mp4' />
+            </video>
+          </div>
+        </div>
+        <div class='pl-12 basis-3/5'>
+          <h2 class='mb-10 text-xl font-bold'>Extras</h2>
+          <p class='mb-12'>
+            The model I used for the character units is Unity-chan, a free asset
+            released by Unity Japan that comes with many animations out of the
+            box. It was a really great resource that allowed me to get up and
+            running a lot faster than if I had taken the time to learn all the
+            ins and outs of modeling and rigging.
+          </p>
+          <p class='mb-12'>
+            The one modification I found useful to make was to differentiate the
+            player and AI units. Instead of trying to find a whole different
+            model, I just opened a couple of the texture files in Photoshop and
+            did a quick and dirty color replacement.
+          </p>
+          <p>
+            There's a lot of cool things that I didn't get to, as I pushed
+            myself to get farther in the project overall rather than taking a
+            deep dive on each aspect of it, as much as I really wanted to.
+          </p>
+        </div>
+      </div>
+
+      <div class='flex'>
+        <p
+          class='pr-8 italic [text-wrap:balance] text-right text-sm text-slate-400 w-72'
+        >
+          Some interesting things happen when your skeleton is not scaled
+          properly to your mesh.
+        </p>
+        <video autoplay loop muted class='w-1/2'>
+          <source src={bug} type='video/mp4' />
+        </video>
+      </div>
+    </div>
   </div>
 </ProjectLayout>
