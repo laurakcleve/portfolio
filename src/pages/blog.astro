@@ -1,0 +1,147 @@
+---
+import { Picture } from '@astrojs/image/components'
+
+import ProjectLayout from '../layouts/ProjectLayout.astro'
+import SiteLink from '../components/project-links/SiteLink.astro'
+import GithubLink from '../components/project-links/GithubLink.astro'
+import ListItem from '../components/ListItem.astro'
+
+import screenshot from '../images/terrain-blog/screenshot.jpg'
+import imageLoad from '/image-load.mp4'
+import performance from '../images/terrain-blog/performance.jpg'
+---
+
+<ProjectLayout title='1d3trees | Laura Cleveland'>
+  <div class='[grid-column:2]'>
+    <div class='my-32'>
+      <h1 class='mb-16 text-3xl font-bold'>1d3trees Blog</h1>
+      <p class='max-w-xl'>
+        A blog for some miniature terrain pieces I made for our D&D campaign a
+        few years ago. I show the process for building process for each piece,
+        so the posts are very image heavy. I built this blog with Gatsby, mostly
+        to take advantage of its convenient image features.
+      </p>
+    </div>
+
+    <div class='mb-32'>
+      <div class='flex flex-wrap items-center'>
+        <div class='grow'>
+          <h2 class='mb-8 text-xl font-semibold'>Created with</h2>
+          <ul>
+            <ListItem>Gatsby JS</ListItem>
+            <ListItem>GraphQL</ListItem>
+            <ListItem>React</ListItem>
+            <ListItem>Netlify</ListItem>
+          </ul>
+        </div>
+
+        <div class='grow shrink-0'>
+          <div class='mb-12'>
+            <SiteLink url='#' />
+          </div>
+          <div>
+            <GithubLink url='#' />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='mb-32 rounded-2xl overflow-hidden shadow-xl'>
+      <Picture
+        src={screenshot}
+        alt='screenshot'
+        widths={[1059]}
+        aspectRatio='1059:739'
+      />
+    </div>
+
+    <div class='mb-32'>
+      <h2 class='mb-10 text-xl font-bold'>Background</h2>
+      <p class='mb-12 max-w-xl'>
+        When my husband and I started our own D&D campaign with our friends, we
+        were all completely new to tabletop games. We went all out on our setup
+        and atmosphere, and I had a blast learning to build miniature
+        environments for our dungeons. This blog was a great place for our play
+        group to come and see what went into the pieces that we played with.
+      </p>
+    </div>
+
+    <div class='mb-20'>
+      <div class='flex flex-wrap'>
+        <div class='basis-2/3 pr-12'>
+          <h2 class='mb-10 text-xl font-bold'>Performance features</h2>
+          <!-- <p class='mb-6'>
+            Gatsby's image plugin uses a blur-up technique; it creates tiny
+            images from the source images and displays them while the full size
+            images load. It's less jarring than being shown a solid color
+            followed by an image, and it helps the page load to feel faster. It
+            also prevents cumulative layout shift (CLS) so the content doesn't
+            move around unexpectedly during load time.
+          </p>
+          <p>
+            Gatsby image uses lazy loading by default, which is crucial for the
+            posts on this site, as each of them has 20-50 high resolution photos
+            on a single page. Another nice optimization that it takes care of
+            for you is creating the different resolutions of your images for
+            different screen sizes,
+          </p> -->
+          <p class='mb-4'>
+            Gatsby's image plugin does so many things for you out of the box,
+            including:
+          </p>
+          <ul class='mb-8'>
+            <ListItem>
+              A blur-up technique that creates tiny images from the source
+              images and displays them while the full images load
+            </ListItem>
+            <ListItem>
+              Prevents cumulative layout shift (CLS) so the content does move
+              around unexpectedly during load time
+            </ListItem>
+            <ListItem>
+              Uses lazy loading by default, which is crucial for the posts on
+              this site, as each has 20-50 high resolution photos on a single
+              page
+            </ListItem>
+            <ListItem>
+              Creates the different resolutions of your images to be served at
+              different screen sizes
+            </ListItem>
+          </ul>
+          <p class='max-w-2xl'>
+            Gatsby also has a &lt;Link&gt; component that prefetches the
+            resources for the pages that are linked to when the link enters the
+            viewport or is moused over, so navigating around feels super fast.
+          </p>
+        </div>
+
+        <div class='basis-1/3 mt-20'>
+          <div class='rounded-xl overflow-hidden shadow-xl'>
+            <video autoplay loop muted>
+              <source src={imageLoad} type='video/mp4' />
+            </video>
+          </div>
+          <p class='mt-2 mb-16 italic text-slate-400 text-center'>
+            Throttled to Fast 3G
+          </p>
+
+          <Picture
+            src={performance}
+            alt='performance'
+            widths={[977]}
+            aspectRatio='977:807'
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</ProjectLayout>
+
+<div class='[grid-column:2] flex justify-center gap-24 mb-40'>
+  <div>
+    <SiteLink url='#' />
+  </div>
+  <div>
+    <GithubLink url='#' />
+  </div>
+</div>
