@@ -8,6 +8,7 @@ import nemesisAiThumbnail from '../images/nemesis-ai/thumbnail.jpg'
 import mealAppThumbnail from '../images/meal-app/thumbnail.jpg'
 import vrTacticsThumbnail from '../images/vr-tactics/thumbnail.jpg'
 import thumbnail from '../images/terrain-blog/thumbnail.jpg'
+import ListItem from '../components/ListItem.astro'
 ---
 
 <Layout title='Laura Cleveland'>
@@ -56,19 +57,19 @@ import thumbnail from '../images/terrain-blog/thumbnail.jpg'
     <h2 class='mb-10 text-2xl font-bold'>My Skills</h2>
 
     <!-- I know there is a way to do thirds for these that has better balance -->
-    <ul class='flex flex-wrap text-sm font-medium uppercase'>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Javascript</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>React</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>SQL</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Typescript</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Python</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>HTML/CSS</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Tailwind CSS</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>styled-components</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Node.js</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Gatsby JS</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>GraphQL</li>
-      <li class='basis-1/2 xs:basis-1/3 py-3'>Prisma</li>
+    <ul class='grid grid-cols-2 gap-2 text-sm font-medium uppercase'>
+      <ListItem small>Javascript</ListItem>
+      <ListItem small>React</ListItem>
+      <ListItem small>SQL</ListItem>
+      <ListItem small>Typescript</ListItem>
+      <ListItem small>Python</ListItem>
+      <ListItem small>HTML/CSS</ListItem>
+      <ListItem small>Tailwind CSS</ListItem>
+      <ListItem small>styled-components</ListItem>
+      <ListItem small>Node.js</ListItem>
+      <ListItem small>Gatsby JS</ListItem>
+      <ListItem small>GraphQL</ListItem>
+      <ListItem small>Prisma</ListItem>
     </ul>
   </Section>
 

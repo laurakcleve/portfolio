@@ -1,3 +1,15 @@
-<li class='mb-2 pl-4 bg-[url(/bullet.svg)] bg-no-repeat bg-[left_top_11px]'>
-  <slot />
-</li>
+---
+const { small } = Astro.props
+---
+
+{
+  small ? (
+    <li class='mb-2 pl-4 bg-[url(/bullet.svg)] bg-no-repeat bg-[left_top_6px]'>
+      <slot />
+    </li>
+  ) : (
+    <li class='mb-2 pl-4 bg-[url(/bullet.svg)] bg-no-repeat bg-[left_top_11px]'>
+      <slot />
+    </li>
+  )
+}
