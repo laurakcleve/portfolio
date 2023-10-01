@@ -14,15 +14,17 @@ import Heading from '../components/Heading.astro'
 
 <Layout title='Laura Cleveland'>
   <div
-    class='grid grid-cols-[minmax(16px,_1fr)_minmax(auto,_1024px)_minmax(16px,_1fr)] col-span-full bg-gradient-to-tr from-[#2c5666] to-[#4e557a] bg-origin-padding'
+    class='grid grid-cols-[minmax(16px,_1fr)_minmax(auto,_1024px)_minmax(16px,_1fr)] sm:grid-cols-[minmax(64px,_1fr)_minmax(auto,_1024px)_minmax(64px,_1fr)] col-span-full bg-gradient-to-tr from-[#2c5666] to-[#4e557a] bg-origin-padding'
   >
-    <div class='[grid-column:_2] pt-4 xs:pt-6 md:pt-10 pb-20 xs:pb-24 sm:pb-48'>
+    <div
+      class='[grid-column:_2] pt-4 xs:pt-6 sm:pt-12 md:pt-10 pb-20 xs:pb-24 sm:pb-32'
+    >
       <a href='/'>
         <Image alt='' src={logo} width={32} height={32} />
       </a>
-      <p class='mt-32 sm:mt-64'>Hello, I'm</p>
+      <p class='mt-32 sm:mt-44'>Hello, I'm</p>
 
-      <h1 class='mb-20 text-3xl xs:text-4xl sm:text-5xl font-semibold'>
+      <h1 class='mb-20 sm:mb-14 text-3xl xs:text-4xl sm:text-5xl font-semibold'>
         <span class='block text-[#ffe1a6]'>Laura</span>
         <span class='block text-[#ffad8f]'>Cleveland</span>
       </h1>
@@ -34,12 +36,12 @@ import Heading from '../components/Heading.astro'
     <p class='mb-12 max-w-lg'>
       I first felt the excitement of programming when I was 12 and hunkered down
       with a copy of Sams Teach Yourself HTML 4 in 24 Hours and made my first
-      "Laura's web page". It was bright yellow and offensively garish, but it
-      opened a door for me into coding and design. After that I was obsessed
-      with Photoshop and had dreams of becoming a graphic designer that didn't
-      pan out. It wasn't until my husband went to school for computer science
-      that I got into programming again. That's when things clicked for me and I
-      was hooked for good.
+      "Laura's web page". It was offensively yellow and garish, but it opened a
+      door for me into coding and design. After that I was obsessed with
+      Photoshop and had dreams of becoming a graphic designer that didn't pan
+      out. It wasn't until my husband went to school for computer science that I
+      got into programming again. That's when things clicked for me and I was
+      hooked for good.
     </p>
     <p class='mb-12 max-w-lg'>
       Since then, for over a decade I have been exploring different areas of
@@ -58,7 +60,9 @@ import Heading from '../components/Heading.astro'
     <Heading>My Skills</Heading>
 
     <!-- I know there is a way to do thirds for these that has better balance -->
-    <ul class='grid grid-cols-2 gap-2 text-sm font-medium uppercase'>
+    <ul
+      class='grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-medium uppercase'
+    >
       <ListItem small>Javascript</ListItem>
       <ListItem small>React</ListItem>
       <ListItem small>SQL</ListItem>
@@ -76,7 +80,7 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <Heading>Featured Projects</Heading>
-    <p class='mb-16 max-w-lg'>
+    <p class='mb-24 max-w-lg'>
       I like to pursue projects that are complex enough to sufficiently
       challenge my abilities and that will lead to really worthwhile learning.
       I'm motivated by opportunities to solve real world problems and
@@ -113,10 +117,6 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <Heading>Get in touch</Heading>
-    <!-- <p class='mb-6 max-w-md'>
-      Anim Lorem et esse sunt duis commodo culpa exercitation est pariatur Lorem
-      qui mollit adipisicing.
-    </p> -->
     <p class='inline-block text-sm font-bold border-b border-b-text'>
       laurakcleve@gmail.com
     </p>

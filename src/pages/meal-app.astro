@@ -15,161 +15,154 @@ import mealAppFt6 from '../images/meal-app/mealapp-ft-6.png'
 import searchFilter from '../images/meal-app/search-filter.png'
 import ingredientOptions from '../images/meal-app/ingredient-options.png'
 import datalist from '../images/meal-app/datalist.png'
+import Section from '../components/Section.astro'
+import Heading from '../components/Heading.astro'
 ---
 
 <ProjectLayout title='Meal app | Laura Cleveland'>
-  <div class='[grid-column:2]'>
-    <div class='my-32'>
-      <h1 class='mb-16 text-3xl font-bold'>Meal app</h1>
-      <p class='mb-6 max-w-xl'>
-        This app was built to be a meal planning assistant. It keeps an
-        inventory of your food, a list of your own recipes, and your grocery
-        purchases. This project has been a great way for me to try out new
-        technologies and has gone through several iterations over the years.
-      </p>
-    </div>
+  <Section>
+    <h1 class='mb-16 text-3xl font-bold'>Meal app</h1>
+    <p class='mb-12 max-w-xl'>
+      This app was built to be a meal planning assistant. It keeps an inventory
+      of your food, a list of your own recipes, and your grocery purchases. This
+      project has been a great way for me to try out new technologies and has
+      gone through several iterations over the years.
+    </p>
 
-    <div class='mb-10'>
-      <div class='flex flex-wrap items-center'>
-        <div class='grow'>
-          <h3 class='mb-8 text-lg font-semibold'>Created with</h3>
-          <ul>
-            <ListItem>React</ListItem>
-            <ListItem>GraphQL</ListItem>
-            <ListItem>Apollo Client</ListItem>
-            <ListItem>Styled-components</ListItem>
-            <ListItem>PostgreSQL</ListItem>
-            <ListItem>
-              Apollo Server/Go with gqlgen<span class='text-lg text-amber-500'
-                >*</span
-              >
-            </ListItem>
-          </ul>
+    <Picture
+      src={thumbnail}
+      alt='screenshot'
+      widths={[600]}
+      aspectRatio='16:9'
+      class='rounded-md'
+    />
+  </Section>
+
+  <div
+    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#70cdf5] to-[#6073f7]'
+  >
+  </div>
+
+  <Section>
+    <div class='xs:flex xs:flex-wrap'>
+      <div class='xs:grow mb-20'>
+        <h3 class='mb-8 text-lg font-semibold'>Created with</h3>
+        <ul>
+          <ListItem>React</ListItem>
+          <ListItem>GraphQL</ListItem>
+          <ListItem>Apollo Client</ListItem>
+          <ListItem>Styled-components</ListItem>
+          <ListItem>PostgreSQL</ListItem>
+          <ListItem>
+            Apollo Server/Go with gqlgen<span class='text-lg text-amber-500'
+              >*</span
+            >
+          </ListItem>
+        </ul>
+      </div>
+
+      <div
+        class='shrink-0 flex justify-center xs:flex-col xs:justify-normal gap-4 xs:gap-8 xs:items-end'
+      >
+        <div>
+          <SiteLink url='#' />
         </div>
-
-        <div class='grow shrink-0'>
-          <div class='mb-12'>
-            <SiteLink url='#' />
-          </div>
-          <div>
-            <GithubLink url='#' />
-          </div>
+        <div>
+          <GithubLink url='#' />
         </div>
       </div>
     </div>
 
-    <div class='col-span-full flex justify-end mb-24'>
-      <div class='basis-1/2 text-sm pr-16 leading-7'>
-        <span class='text-lg text-amber-500'>*</span> I originally built the backend
-        in Node and Apollo Server, and later built a second version of the server
-        in Go as a way to get started learning the language. I used the gqlgen library
-        to maintain the GraphQL functionality and stay compatible with my Apollo-based
-        frontend.
-      </div>
+    <div class='text-sm mb-12 ml-12 sm:ml-24 md:ml-48 lg:ml-96 leading-6'>
+      <span class='text-lg text-amber-500'>*</span> I originally built the backend
+      in Node and Apollo Server, and later built a second version of the server in
+      Go as a way to get started learning the language. I used the gqlgen library
+      to maintain the GraphQL functionality and stay compatible with my Apollo-based
+      frontend.
     </div>
+  </Section>
 
-    <div class='mb-32'>
-      <Picture
-        src={thumbnail}
-        alt='screenshot'
-        widths={[600]}
-        aspectRatio='16:9'
-        class='mb-20 rounded-md'
-      />
-    </div>
-
-    <div class='mb-32'>
-      <h2 class='mb-16 text-xl font-bold'>Background and goal</h2>
-      <p class='mb-16 max-w-2xl'>
-        I used to be terrible at figuring out what to cook on the spot. I’d end
-        up in a last-minute scramble every single day, and it was a huge source
-        of stress for me. I became obsessed with avoiding that stress, and dove
-        deep into meal planning. I planned out every meal as far in advance as I
-        could and made sure I had maximum variety from day to day. I ended up
-        constantly buying ingredients for every dish under the sun, and I
-        couldn’t keep track of them and use them up in time. Things went bad,
-        and I’d kick myself for it.
-      </p>
-      <p class='max-w-2xl'>
-        The obvious solution to me was, “I need a database of every food item in
-        my house.” And almost immediately I started having big dreams of how
-        everything could fit into a system that could tell me anything I wanted
-        to know. What can I make that doesn't use chicken, and isn't a soup,
-        that I haven't had for a while? What do I need to use out of the fridge
-        ASAP, and what can I make with it? Have I been spending too much on eggs
-        when I could be buying them cheaper elsewhere? More important than all
-        of these questions was how I could do more with less. I was spending so
-        much time and energy on perfecting my process and I wanted everything to
-        be automated. I wanted to be able to switch my brain off and, ideally,
-        create something that could do it all better than I could.
-      </p>
-    </div>
-
-    <div class='mb-32'>
-      <h2 class='mb-16 text-xl font-bold'>Cool features</h2>
-      <div class='grid grid-cols-[1fr_2fr] gap-24'>
-        <p>
-          You can add your recipes and their ingredients to a list of meals, and
-          sort them by the date you last used them, which is helpful in keeping
-          a rotation. To that end, you can tag dishes that you want to be active
-          in your rotation, so if you have meals that you don’t want as often,
-          you can filter them out. All dishes can be filtered by categories/tags
-          that are created by you.
-        </p>
+  <Section>
+    <Heading>Cool features</Heading>
+    <!-- <div class='grid grid-cols-[1fr_2fr] gap-24'> -->
+    <div class='flex flex-wrap mb-20'>
+      <div class='lg:basis-3/5'>
         <Picture
           src={mealAppFt1}
           alt='meal app feature 1'
           widths={[706]}
           aspectRatio='706:602'
         />
+      </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        You can add your recipes and their ingredients to a list of meals, and
+        sort them by the date you last used them, which is helpful in keeping a
+        rotation. To that end, you can tag dishes that you want to be active in
+        your rotation, so if you have meals that you don’t want as often, you
+        can filter them out. All dishes can be filtered by categories/tags that
+        are created by you.
+      </p>
+    </div>
 
-        <p>
-          The categories can be filtered by matching any of the selected
-          categories, or all of them (i.e. an OR filter or an AND filter).
-        </p>
+    <div class='flex flex-wrap mb-20'>
+      <div class='lg:basis-3/5'>
         <Picture
           src={mealAppFt2}
           alt='meal app feature 2'
           widths={[706]}
           aspectRatio='706:602'
         />
+      </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        The categories can be filtered by matching any of the selected
+        categories, or all of them (i.e. an OR filter or an AND filter).
+      </p>
+    </div>
 
-        <p>
-          For each dish, you can see which of the ingredients you have and don’t
-          have.
-        </p>
+    <div class='flex flex-wrap mb-20'>
+      <div class='lg:basis-3/5'>
         <Picture
           src={mealAppFt3}
           alt='meal app feature 3'
           widths={[706]}
           aspectRatio='706:602'
         />
+      </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        For each dish, you can see which of the ingredients you have and don’t
+        have.
+      </p>
+    </div>
 
-        <p>
-          When entering in purchase items, the form remembers details about the
-          current item that you’ve previously entered and autofills them for
-          you.
-        </p>
+    <div class='flex flex-wrap mb-20'>
+      <div class='lg:basis-3/5'>
         <img src={addGif.src} alt='' />
+      </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        When entering in purchase items, the form remembers details about the
+        current item that you’ve previously entered and autofills them for you.
+      </p>
+    </div>
 
-        <p>
-          An item’s details page shows you its average price based on your
-          purchase history, as well as the average price for each location you
-          purchased it at. This helps you stay informed about your cost
-          efficiency.
-        </p>
+    <div class='flex flex-wrap mb-20'>
+      <div class='lg:basis-3/5'>
         <Picture
           src={mealAppFt5}
           alt='meal app feature 5'
           widths={[706]}
           aspectRatio='706:602'
         />
+      </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        An item’s details page shows you its average price based on your
+        purchase history, as well as the average price for each location you
+        purchased it at. This helps you stay informed about your cost
+        efficiency.
+      </p>
+    </div>
 
-        <p>
-          The inventory helps you reduce your food waste and use your items
-          efficiently by sorting by expiration dates and listing dishes that
-          each item can be used in.
-        </p>
+    <div class='flex flex-wrap'>
+      <div class='lg:basis-3/5'>
         <Picture
           src={mealAppFt6}
           alt='meal app feature 6'
@@ -177,10 +170,17 @@ import datalist from '../images/meal-app/datalist.png'
           aspectRatio='706:602'
         />
       </div>
+      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+        The inventory helps you reduce your food waste and use your items
+        efficiently by sorting by expiration dates and listing dishes that each
+        item can be used in.
+      </p>
     </div>
+  </Section>
 
-    <div class='flex mb-12'>
-      <p class='basis-1/2 pr-12'>
+  <Section>
+    <div class='lg:flex'>
+      <p class='mb-8 lg:basis-1/2'>
         The ingredients in dishes have a great deal of flexibility. You can make
         things optional, list substitutes, and specify another ingredient that
         this item “counts as” (e.g. your sandwich dish has “cheese” as an
@@ -189,7 +189,7 @@ import datalist from '../images/meal-app/datalist.png'
         “cheese”). Substitutes like that are taken into account when filtering
         dishes on whether or not you have all the required ingredients.
       </p>
-      <div class='basis-1/2'>
+      <div class='mb-10 lg:basis-1/2'>
         <Picture
           src={ingredientOptions}
           alt='ingredient options'
@@ -198,24 +198,51 @@ import datalist from '../images/meal-app/datalist.png'
         />
       </div>
     </div>
-    <div class='mb-32'>
-      <p class='mb-12 max-w-3xl'>
-        Additionally, you can use other dishes as ingredients. This is helpful
-        for things like homemade sauces that go into different things, or other
-        meals that are assembled, like sandwiches or burrito bowls. It was
-        essential to include this feature in order to avoid messy duplicates
-        across dishes and ingredients and to keep the data more true to its
-        source.
-      </p>
-      <p class='mb-12 max-w-3xl'>
-        These functionalities drastically changed the original database design
-        and added a significant amount of complexity to the business logic, but
-        greatly increased the overall usefulness of the system.
-      </p>
-    </div>
 
-    <div class='flex gap-16 mb-32'>
-      <div class='basis-2/5'>
+    <p class='mb-10 max-w-3xl'>
+      Additionally, you can use other dishes as ingredients. This is helpful for
+      things like homemade sauces that go into different things, or other meals
+      that are assembled, like sandwiches or burrito bowls. It was essential to
+      include this feature in order to avoid messy duplicates across dishes and
+      ingredients and to keep the data more true to its source.
+    </p>
+    <p class='max-w-3xl'>
+      These functionalities drastically changed the original database design and
+      added a significant amount of complexity to the business logic, but
+      greatly increased the overall usefulness of the system.
+    </p>
+  </Section>
+
+  <Section>
+    <Heading>Background and goal</Heading>
+    <p class='mb-10 max-w-2xl'>
+      I used to be terrible at figuring out what to cook on the spot. I’d end up
+      in a last-minute scramble every single day, and it was a huge source of
+      stress for me. I became obsessed with avoiding that stress, and dove deep
+      into meal planning. I planned out every meal as far in advance as I could
+      and made sure I had maximum variety from day to day. I ended up constantly
+      buying ingredients for every dish under the sun, and I couldn’t keep track
+      of them and use them up in time. Things went bad, and I’d kick myself for
+      it.
+    </p>
+    <p class='max-w-2xl'>
+      The obvious solution to me was, “I need a database of every food item in
+      my house.” And almost immediately I started having big dreams of how
+      everything could fit into a system that could tell me anything I wanted to
+      know. What can I make that doesn't use chicken, and isn't a soup, that I
+      haven't had for a while? What do I need to use out of the fridge ASAP, and
+      what can I make with it? Have I been spending too much on eggs when I
+      could be buying them cheaper elsewhere? More important than all of these
+      questions was how I could do more with less. I was spending so much time
+      and energy on perfecting my process and I wanted everything to be
+      automated. I wanted to be able to switch my brain off and, ideally, create
+      something that could do it all better than I could.
+    </p>
+  </Section>
+
+  <Section>
+    <div class='md:flex md:flex-wrap'>
+      <div class='md:basis-2/3 lg:basis-2/5'>
         <Picture
           src={searchFilter}
           alt='search and filter'
@@ -223,9 +250,9 @@ import datalist from '../images/meal-app/datalist.png'
           aspectRatio='460:712'
         />
       </div>
-      <div class='basis-3/5'>
-        <h2 class='mb-16 text-xl font-bold'>Technical challenges</h2>
-        <p class='mb-20'>
+      <div class='lg:basis-3/5'>
+        <Heading>Technical challenges</Heading>
+        <p class='mb-10'>
           In a couple of places in the app you have a big list of items or
           dishes that you can manipulate in different ways: you can sort it by
           different fields, you can apply filters, and you can do a search. You
@@ -254,12 +281,12 @@ import datalist from '../images/meal-app/datalist.png'
         </p>
       </div>
     </div>
+  </Section>
 
-    <div class='flex mb-32'>
-      <div class='basis-2/3'>
-        <h3 class='mb-16 text-lg font-semibold'>
-          Spotlight: &lt;datalist&gt; element
-        </h3>
+  <Section>
+    <Heading>Spotlight: &lt;datalist&gt; element</Heading>
+    <div class='md:flex'>
+      <div class='md:basis-1/2'>
         <p class='mb-6'>
           When you're inputting an ingredient in a recipe, or logging the
           purchase of an item, you want that item to be from the single source
@@ -277,16 +304,21 @@ import datalist from '../images/meal-app/datalist.png'
           dish or purchase item you're creating.
         </p>
       </div>
-      <Picture
-        src={datalist}
-        alt='datalist element'
-        widths={[461]}
-        aspectRatio='461:382'
-        class='basis-1/3'
-      />
-    </div>
 
-    <div class='[grid-column:2] flex justify-center gap-24 mb-40'>
+      <div class='md:basis-1/2'>
+        <Picture
+          src={datalist}
+          alt='datalist element'
+          widths={[461]}
+          aspectRatio='461:382'
+          class='basis-1/3'
+        />
+      </div>
+    </div>
+  </Section>
+
+  <Section>
+    <div class='flex justify-center gap-4'>
       <div>
         <SiteLink url='#' />
       </div>
@@ -294,5 +326,5 @@ import datalist from '../images/meal-app/datalist.png'
         <GithubLink url='#' />
       </div>
     </div>
-  </div>
+  </Section>
 </ProjectLayout>

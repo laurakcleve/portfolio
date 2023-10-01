@@ -12,10 +12,11 @@ import nem3 from '../images/nemesis-ai/nem-3.png'
 import nemDoc1 from '../images/nemesis-ai/nem-doc-1.png'
 import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
 import ListItem from '../components/ListItem.astro'
+import Heading from '../components/Heading.astro'
 ---
 
 <ProjectLayout title='Nemesis AI | Laura Cleveland'>
-  <div class='[grid-column:2] my-32'>
+  <Section>
     <h1 class='mb-16 text-3xl font-bold'>Nemesis AI</h1>
     <p class='mb-10 max-w-xl'>
       Nemesis AI is a bot that I built to answer questions about the rules of
@@ -26,18 +27,29 @@ import ListItem from '../components/ListItem.astro'
         class='text-teal-500'>Nemesis</a
       >.
     </p>
-    <p class='max-w-xl'>
+    <p class='mb-12 max-w-xl'>
       The project is a two-part system: the Python scripts that build an index
       from the rules of the game, and the Next app that provides the interface
       and feeds GPT the parts of the index it needs to answer user questions.
     </p>
+
+    <Picture
+      src={nem1NoBg}
+      alt='screenshot'
+      widths={[1024]}
+      aspectRatio='1126:852'
+    />
+  </Section>
+
+  <div
+    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#70cdf5] to-[#6073f7]'
+  >
   </div>
 
-  <div class='[grid-column:2] mb-32'>
-    <div class='flex flex-wrap items-center'>
-      <div class='grow'>
-        <h2 class='mb-8 text-xl font-semibold'>Created with</h2>
-        <!-- <ul class=`list-image-[url(/bullet.svg)]`> -->
+  <Section>
+    <div class='xs:flex xs:flex-wrap'>
+      <div class='grow mr-16 mb-10'>
+        <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
         <ul>
           <ListItem>Python</ListItem>
           <ListItem>Langchain</ListItem>
@@ -48,8 +60,10 @@ import ListItem from '../components/ListItem.astro'
         </ul>
       </div>
 
-      <div class='grow shrink-0'>
-        <div class='mb-12'>
+      <div
+        class='shrink-0 flex justify-center xs:flex-col xs:justify-normal gap-4 xs:gap-8 xs:items-end'
+      >
+        <div>
           <SiteLink url='#' />
         </div>
         <div>
@@ -57,25 +71,10 @@ import ListItem from '../components/ListItem.astro'
         </div>
       </div>
     </div>
-  </div>
+  </Section>
 
-  <div class='[grid-column:2] mb-32'>
-    <!-- <Picture
-      src={nem1}
-      alt='screenshot'
-      widths={[1024]}
-      aspectRatio='1204:890'
-    /> -->
-    <Picture
-      src={nem1NoBg}
-      alt='screenshot'
-      widths={[1024]}
-      aspectRatio='1126:852'
-    />
-  </div>
-
-  <div class='[grid-column:2] mb-32'>
-    <h2 class='mb-10 text-xl font-bold'>Motivation and purpose</h2>
+  <Section>
+    <Heading>Motivation and purpose</Heading>
     <p class='mb-12 max-w-xl'>
       The emergence of new AI tools has been a great opportunity for me to
       explore different corners of programming and find new things to bring into
@@ -94,37 +93,35 @@ import ListItem from '../components/ListItem.astro'
       out there. I better understand the tradeoffs of different ones, and can
       make more informed decisions about which to use for different situations.
     </p>
-  </div>
+  </Section>
 
-  <div class='[grid-column:2] mb-20'>
-    <div class='flex gap-16 lg:gap-24 flex-wrap lg:flex-nowrap lg:flex-row'>
-      <div class='sm:basis-2/3 md:basis-3/5 lg:basis-1/2'>
+  <Section>
+    <div class='flex flex-wrap lg:flex-nowrap lg:flex-row'>
+      <div class='sm:basis-2/3 md:basis-3/5 lg:basis-2/5'>
         <Picture
           src={screenshotMobile}
           alt='screenshot'
           widths={[1024]}
           aspectRatio='593:694'
-          class='rounded-2xl'
+          class='mb-10 rounded-2xl'
         />
       </div>
 
-      <div class='lg:basis-1/2'>
-        <h2 class='mb-4 text-xl font-bold'>Features</h2>
+      <div class='lg:basis-1/2 lg:ml-12'>
+        <Heading>Features</Heading>
         <p class='mb-6'>
-          The format for the system is a single question and answer, as is
-          pretty common for tools like those that let you ask questions about a
-          podcast series or YouTube channel. This keeps the UI simple and the
-          text generation output more predictable, but with GPT it’s possible to
+          The format of the system is a single question and answer, as is pretty
+          common for tools like those that let you ask questions about a podcast
+          series or YouTube channel. This keeps the UI simple and the text
+          generation output more predictable, but with GPT it’s possible to
           implement a continuous conversation as well.
         </p>
       </div>
     </div>
-  </div>
 
-  <div class='[grid-column:2] mb-20'>
     <p class='max-w-2xl'>
-      The app is simple and straightforward, but one extra thing I added for my
-      own sanity was a debugging log. During development I quickly found that
+      The app is pretty straightforward, but one extra thing I added for my own
+      sanity was a debugging log. During development I quickly found that
       debugging LLM inputs and outputs was a whole different beast than
       debugging I had done for any kind of project I'd done before. The logs
       usually consist of large amounts of text that are hard to parse at a
@@ -133,20 +130,18 @@ import ListItem from '../components/ListItem.astro'
       material that matched the similarity search, as well as the sections that
       were sent to the API as context for the answer.
     </p>
-  </div>
 
-  <div class='[grid-column:2] mb-20'>
     <Picture
       src={nem3}
       alt='screenshot'
       widths={[1024]}
       aspectRatio='1204:694'
-      class='rounded-2xl'
+      class='mt-10 rounded-2xl'
     />
-  </div>
+  </Section>
 
-  <div class='[grid-column:2] mb-32'>
-    <h2 class='mb-10 text-xl font-bold'>Challenges</h2>
+  <Section>
+    <Heading>Challenges</Heading>
     <p class='mb-12 max-w-xl'>
       I ran headlong into the ever-persistent problem of LLMs: accuracy. The
       process of question-answering with a custom knowledge base at its most
@@ -167,32 +162,32 @@ import ListItem from '../components/ListItem.astro'
       and get the larger sections that those chunks came from. This helped my
       retrieval accuracy and context quality immensely.
     </p>
-  </div>
+  </Section>
 
-  <div class='[grid-column:2] flex gap-14 mb-32'>
-    <div class='basis-2/3'>
-      <Picture
-        src={nemDoc1}
-        alt='screenshot'
-        widths={[618]}
-        aspectRatio='618:694'
-        class='rounded-2xl'
-      />
+  <Section>
+    <div class='flex flex-wrap lg:flex-nowrap lg:flex-row'>
+      <div class='sm:basis-2/3 md:basis-3/5 lg:basis-2/5'>
+        <Picture
+          src={nemDoc1}
+          alt='screenshot'
+          widths={[618]}
+          aspectRatio='618:694'
+          class='mb-10 rounded-2xl'
+        />
+      </div>
+
+      <div class='lg:basis-1/2 lg:ml-12'>
+        <Heading>Documenting the process</Heading>
+        <p class='mb-12 max-w-xl'>
+          I’ve grown more and more fond of keeping notes as I work on a project,
+          and on this project I was the most thorough I’ve been thus far. I like
+          to use Obsidian for my notes and have been trying out their Canvas
+          feature as a new way of laying everything out. I plan to use these
+          notes to put together a blog post on the process.
+        </p>
+      </div>
     </div>
 
-    <div class='basis-1/2'>
-      <h2 class='mb-10 text-xl font-bold'>Documenting the process</h2>
-      <p class='mb-12 max-w-xl'>
-        I’ve grown more and more fond of keeping notes as I work on a project,
-        and on this project I was the most thorough I’ve been thus far. I like
-        to use Obsidian for my notes and have been trying out their Canvas
-        feature as a new way of laying everything out. I plan to use these notes
-        to put together a blog post on the process.
-      </p>
-    </div>
-  </div>
-
-  <div class='[grid-column:2] mb-40'>
     <Picture
       src={nemDoc2}
       alt='screenshot'
@@ -200,14 +195,16 @@ import ListItem from '../components/ListItem.astro'
       aspectRatio='1202:803'
       class='rounded-2xl'
     />
-  </div>
+  </Section>
 
-  <div class='[grid-column:2] flex justify-center gap-24 mb-40'>
-    <div>
-      <SiteLink url='#' />
+  <Section>
+    <div class='flex justify-center gap-4'>
+      <div>
+        <SiteLink url='#' />
+      </div>
+      <div>
+        <GithubLink url='#' />
+      </div>
     </div>
-    <div>
-      <GithubLink url='#' />
-    </div>
-  </div>
+  </Section>
 </ProjectLayout>
