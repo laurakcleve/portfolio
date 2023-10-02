@@ -1,18 +1,18 @@
 ---
 import { Picture } from '@astrojs/image/components'
+
 import ProjectLayout from '../layouts/ProjectLayout.astro'
 import Section from '../components/Section.astro'
 import SiteLink from '../components/project-links/SiteLink.astro'
 import GithubLink from '../components/project-links/GithubLink.astro'
-import screenshotFullWithAnswer from '../images/nemesis-ai/thumbnail.jpg'
+import ListItem from '../components/ListItem.astro'
+import Heading from '../components/Heading.astro'
+
 import screenshotMobile from '../images/nemesis-ai/nem-mobile.png'
-import nem1 from '../images/nemesis-ai/nem-1.png'
 import nem1NoBg from '../images/nemesis-ai/nem-1-no-bg.png'
 import nem3 from '../images/nemesis-ai/nem-3.png'
 import nemDoc1 from '../images/nemesis-ai/nem-doc-1.png'
 import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
-import ListItem from '../components/ListItem.astro'
-import Heading from '../components/Heading.astro'
 ---
 
 <ProjectLayout title='Nemesis AI | Laura Cleveland'>
@@ -48,7 +48,7 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <div class='xs:flex xs:flex-wrap'>
-      <div class='grow mr-16 mb-10'>
+      <div class='xs:grow'>
         <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
         <ul>
           <ListItem>Python</ListItem>
