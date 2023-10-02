@@ -27,7 +27,7 @@ import Heading from '../components/Heading.astro'
       includes player- and AI-controlled turns that allow movement and attacks.
     </p>
 
-    <div class='rounded-2xl overflow-hidden'>
+    <div class='mb-8 rounded-2xl overflow-hidden'>
       <video autoplay loop muted class='w-full'>
         <source src={demo} type='video/mp4' />
       </video>
@@ -41,7 +41,7 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <div class='xs:flex xs:flex-wrap'>
-      <div class='xs:grow mb-20'>
+      <div class='xs:grow mb-16 xs:mb-0'>
         <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
         <ul>
           <ListItem>Unity</ListItem>
@@ -261,6 +261,12 @@ import Heading from '../components/Heading.astro'
           </video>
         </div>
       </div>
+    </div>
+  </Section>
+
+  <Section>
+    <div class='flex justify-center gap-4'>
+      <GithubLink url='#' />
     </div>
   </Section>
 </ProjectLayout>

@@ -34,7 +34,7 @@ import Heading from '../components/Heading.astro'
       alt='screenshot'
       widths={[600]}
       aspectRatio='16:9'
-      class='rounded-md'
+      class='mb-8 rounded-md'
     />
   </Section>
 
@@ -45,7 +45,7 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <div class='xs:flex xs:flex-wrap'>
-      <div class='xs:grow mb-20'>
+      <div class='xs:grow mb-20 xs:mb-0'>
         <h2 class='mb-6 text-xl font-semibold'>Created with</h2>
         <ul>
           <ListItem>React</ListItem>
@@ -64,12 +64,8 @@ import Heading from '../components/Heading.astro'
       <div
         class='shrink-0 flex justify-center xs:flex-col xs:justify-normal gap-4 xs:gap-8 xs:items-end'
       >
-        <div>
-          <SiteLink url='#' />
-        </div>
-        <div>
-          <GithubLink url='#' />
-        </div>
+        <SiteLink url='#' />
+        <GithubLink url='#' />
       </div>
     </div>
 
@@ -318,12 +314,8 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <div class='flex justify-center gap-4'>
-      <div>
-        <SiteLink url='#' />
-      </div>
-      <div>
-        <GithubLink url='#' />
-      </div>
+      <SiteLink url='#' />
+      <GithubLink url='#' />
     </div>
   </Section>
 </ProjectLayout>
