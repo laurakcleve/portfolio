@@ -1,15 +1,20 @@
 ---
 import { Image } from '@astrojs/image/components'
-import logo from '../images/logo.svg'
+
 import Layout from '../layouts/Layout.astro'
 import Section from '../components/Section.astro'
 import Project from '../components/Project.astro'
+import ListItem from '../components/ListItem.astro'
+import Heading from '../components/Heading.astro'
+
+import logo from '../images/logo.svg'
+import githubIcon from '../images/github.svg'
+import twitterIcon from '../images/twitter.svg'
+import linkedinIcon from '../images/linkedin.svg'
 import nemesisAiThumbnail from '../images/nemesis-ai/thumbnail.jpg'
 import mealAppThumbnail from '../images/meal-app/thumbnail.jpg'
 import vrTacticsThumbnail from '../images/vr-tactics/thumbnail.jpg'
 import thumbnail from '../images/terrain-blog/thumbnail.jpg'
-import ListItem from '../components/ListItem.astro'
-import Heading from '../components/Heading.astro'
 ---
 
 <Layout title='Laura Cleveland'>
@@ -19,9 +24,40 @@ import Heading from '../components/Heading.astro'
     <div
       class='[grid-column:_2] pt-4 xs:pt-6 sm:pt-12 md:pt-10 pb-20 xs:pb-24 sm:pb-32'
     >
-      <a href='/'>
-        <Image alt='' src={logo} width={32} height={32} />
-      </a>
+      <div class='flex'>
+        <a href='/'>
+          <Image alt='' src={logo} width={32} height={32} />
+        </a>
+        <a
+          href='https://github.com/laurakcleve'
+          target='_blank'
+          rel='noopener noreferrer'
+          class='ml-auto mr-4'
+        >
+          <Image alt='Github icon' src={githubIcon} width={24} height={24} />
+        </a>
+        <a
+          href='https://twitter.com/laurak_cleve'
+          target='_blank'
+          rel='noopener noreferrer'
+          class='mr-4'
+        >
+          <Image alt='Twitter icon' src={twitterIcon} width={24} height={24} />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/laura-cleveland-4495844a/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Image
+            alt='LinkedIn icon'
+            src={linkedinIcon}
+            width={24}
+            height={24}
+          />
+        </a>
+      </div>
+
       <p class='mt-32 sm:mt-44'>Hello, I'm</p>
 
       <h1 class='mb-20 sm:mb-14 text-3xl xs:text-4xl sm:text-5xl font-semibold'>
@@ -59,7 +95,6 @@ import Heading from '../components/Heading.astro'
   <Section>
     <Heading>My Skills</Heading>
 
-    <!-- I know there is a way to do thirds for these that has better balance -->
     <ul
       class='grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm font-medium uppercase'
     >
