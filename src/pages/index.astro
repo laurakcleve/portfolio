@@ -7,10 +7,10 @@ import Project from '../components/Project.astro'
 import ListItem from '../components/ListItem.astro'
 import Heading from '../components/Heading.astro'
 
-import logo from '../images/logo.svg'
-import githubIcon from '../images/github.svg'
-import twitterIcon from '../images/twitter.svg'
-import linkedinIcon from '../images/linkedin.svg'
+import Logo from '../images/Logo.astro'
+import GithubIcon from '../images/Github.astro'
+import TwitterIcon from '../images/Twitter.astro'
+import LinkedInIcon from '../images/LinkedIn.astro'
 import nemesisAiThumbnail from '../images/nemesis-ai/main.png'
 import mealAppThumbnail from '../images/meal-app/main.png'
 import vrTacticsThumbnail from '../images/vr-tactics/thumbnail.jpg'
@@ -26,7 +26,7 @@ import thumbnail from '../images/terrain-blog/main.png'
     >
       <div class='flex'>
         <a href='/'>
-          <Image alt='' src={logo} width={32} height={32} />
+          <Logo color='#fff' width='32' height='32' />
         </a>
         <a
           href='https://github.com/laurakcleve'
@@ -34,7 +34,7 @@ import thumbnail from '../images/terrain-blog/main.png'
           rel='noopener noreferrer'
           class='ml-auto mr-4'
         >
-          <Image alt='Github icon' src={githubIcon} width={24} height={24} />
+          <GithubIcon color='#fff' width='24' height='24' />
         </a>
         <a
           href='https://twitter.com/laurak_cleve'
@@ -42,19 +42,14 @@ import thumbnail from '../images/terrain-blog/main.png'
           rel='noopener noreferrer'
           class='mr-4'
         >
-          <Image alt='Twitter icon' src={twitterIcon} width={24} height={24} />
+          <TwitterIcon color='#fff' width='24' height='24' />
         </a>
         <a
           href='https://www.linkedin.com/in/laura-cleveland-4495844a/'
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Image
-            alt='LinkedIn icon'
-            src={linkedinIcon}
-            width={24}
-            height={24}
-          />
+          <LinkedInIcon color='#fff' width='24' height='24' />
         </a>
       </div>
 
