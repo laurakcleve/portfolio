@@ -8,7 +8,7 @@ import ListItem from '../components/ListItem.astro'
 import Section from '../components/Section.astro'
 import Heading from '../components/Heading.astro'
 
-import screenshot from '../images/terrain-blog/screenshot.jpg'
+import screenshot from '../images/terrain-blog/main.png'
 import imageLoad from '/image-load.mp4'
 import performance from '../images/terrain-blog/performance.jpg'
 ---
@@ -23,14 +23,14 @@ import performance from '../images/terrain-blog/performance.jpg'
       advantage of its convenient image features.
     </p>
 
-    <div class='mb-8 rounded-2xl overflow-hidden shadow-xl'>
-      <Picture
-        src={screenshot}
-        alt='screenshot'
-        widths={[1059]}
-        aspectRatio='1059:739'
-      />
-    </div>
+    <Picture
+      src={screenshot}
+      alt='screenshot'
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1200px) 100vw, 1024'
+      aspectRatio='1297:885'
+      class='mb-8 drop-shadow-custom'
+    />
   </Section>
 
   <div
@@ -118,13 +118,15 @@ import performance from '../images/terrain-blog/performance.jpg'
 
   <Section>
     <div class='flex justify-center'>
-      <Picture
-        src={performance}
-        alt='performance'
-        widths={[977]}
-        aspectRatio='977:807'
-        class='max-w-xl'
-      />
+      <div class='max-w-xl'>
+        <Picture
+          src={performance}
+          alt='performance'
+          widths={[977]}
+          sizes='(max-width: 768px) 100vw, 576px'
+          aspectRatio='977:807'
+        />
+      </div>
     </div>
   </Section>
 

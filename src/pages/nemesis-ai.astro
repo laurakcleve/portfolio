@@ -8,6 +8,7 @@ import GithubLink from '../components/project-links/GithubLink.astro'
 import ListItem from '../components/ListItem.astro'
 import Heading from '../components/Heading.astro'
 
+import screenshot from '../images/nemesis-ai/main.png'
 import screenshotMobile from '../images/nemesis-ai/nem-mobile.png'
 import nem1NoBg from '../images/nemesis-ai/nem-1-no-bg.png'
 import nem3 from '../images/nemesis-ai/nem-3.png'
@@ -34,11 +35,12 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
     </p>
 
     <Picture
-      src={nem1NoBg}
+      src={screenshot}
       alt='screenshot'
-      widths={[1024]}
-      aspectRatio='1126:852'
-      class='mb-8'
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1200px) 100vw, 1024'
+      aspectRatio='1297:885'
+      class='mb-8 drop-shadow-custom'
     />
   </Section>
 
@@ -98,7 +100,8 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
         <Picture
           src={screenshotMobile}
           alt='screenshot'
-          widths={[1024]}
+          widths={[600, 400]}
+          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 600'
           aspectRatio='593:694'
           class='mb-10 rounded-2xl'
         />
@@ -131,7 +134,8 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
     <Picture
       src={nem3}
       alt='screenshot'
-      widths={[1024]}
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1024px) 100vw, 1024'
       aspectRatio='1204:694'
       class='mt-10 rounded-2xl'
     />
@@ -167,7 +171,8 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
         <Picture
           src={nemDoc1}
           alt='screenshot'
-          widths={[618]}
+          widths={[600, 410]}
+          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 410'
           aspectRatio='618:694'
           class='mb-10 rounded-2xl'
         />
@@ -188,7 +193,8 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
     <Picture
       src={nemDoc2}
       alt='screenshot'
-      widths={[1024]}
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1200px) 100vw, 1024'
       aspectRatio='1202:803'
       class='rounded-2xl'
     />

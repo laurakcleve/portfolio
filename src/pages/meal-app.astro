@@ -2,9 +2,12 @@
 import { Picture } from '@astrojs/image/components'
 
 import ProjectLayout from '../layouts/ProjectLayout.astro'
-import thumbnail from '../images/meal-app/thumbnail.jpg'
-import addGif from '../images/meal-app/purchase-item-add.gif'
 import ListItem from '../components/ListItem.astro'
+import Section from '../components/Section.astro'
+import Heading from '../components/Heading.astro'
+
+import main from '../images/meal-app/main.png'
+import addGif from '../images/meal-app/purchase-item-add.gif'
 import SiteLink from '../components/project-links/SiteLink.astro'
 import GithubLink from '../components/project-links/GithubLink.astro'
 import mealAppFt1 from '../images/meal-app/mealapp-ft-1.png'
@@ -15,8 +18,6 @@ import mealAppFt6 from '../images/meal-app/mealapp-ft-6.png'
 import searchFilter from '../images/meal-app/search-filter.png'
 import ingredientOptions from '../images/meal-app/ingredient-options.png'
 import datalist from '../images/meal-app/datalist.png'
-import Section from '../components/Section.astro'
-import Heading from '../components/Heading.astro'
 ---
 
 <ProjectLayout title='Meal app | Laura Cleveland'>
@@ -30,11 +31,12 @@ import Heading from '../components/Heading.astro'
     </p>
 
     <Picture
-      src={thumbnail}
+      src={main}
       alt='screenshot'
-      widths={[600]}
-      aspectRatio='16:9'
-      class='mb-8 rounded-md'
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1200px) 100vw, 1024'
+      aspectRatio='1297:885'
+      class='mb-8 drop-shadow-custom'
     />
   </Section>
 
@@ -85,7 +87,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={mealAppFt1}
           alt='meal app feature 1'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
         />
       </div>
@@ -104,7 +107,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={mealAppFt2}
           alt='meal app feature 2'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
         />
       </div>
@@ -119,7 +123,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={mealAppFt3}
           alt='meal app feature 3'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
         />
       </div>
@@ -144,7 +149,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={mealAppFt5}
           alt='meal app feature 5'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
         />
       </div>
@@ -161,7 +167,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={mealAppFt6}
           alt='meal app feature 6'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
         />
       </div>
@@ -188,7 +195,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={ingredientOptions}
           alt='ingredient options'
-          widths={[746]}
+          widths={[746, 512, 400]}
+          sizes='(max-width: 1024px) 100vw, 512'
           aspectRatio='746:322'
         />
       </div>
@@ -241,7 +249,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={searchFilter}
           alt='search and filter'
-          widths={[460]}
+          widths={[500, 400]}
+          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 400'
           aspectRatio='460:712'
         />
       </div>
@@ -304,7 +313,8 @@ import Heading from '../components/Heading.astro'
         <Picture
           src={datalist}
           alt='datalist element'
-          widths={[461]}
+          widths={[512, 400]}
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 512'
           aspectRatio='461:382'
           class='basis-1/3'
         />
