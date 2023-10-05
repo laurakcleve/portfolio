@@ -5,17 +5,20 @@ import ProjectLayout from '../layouts/ProjectLayout.astro'
 import ListItem from '../components/ListItem.astro'
 import Section from '../components/Section.astro'
 import Heading from '../components/Heading.astro'
+import Feature from '../components/features/Feature.astro'
+import FeatureImage from '../components/features/FeatureImage.astro'
+import FeatureText from '../components/features/FeatureText.astro'
+import SiteLink from '../components/project-links/SiteLink.astro'
+import GithubLink from '../components/project-links/GithubLink.astro'
 
 import main from '../images/meal-app/main.png'
 import addGif from '../images/meal-app/purchase-item-add.gif'
-import SiteLink from '../components/project-links/SiteLink.astro'
-import GithubLink from '../components/project-links/GithubLink.astro'
-import mealAppFt1 from '../images/meal-app/mealapp-ft-1.png'
-import mealAppFt2 from '../images/meal-app/mealapp-ft-2.png'
-import mealAppFt3 from '../images/meal-app/mealapp-ft-3.png'
-import mealAppFt5 from '../images/meal-app/mealapp-ft-5.png'
-import mealAppFt6 from '../images/meal-app/mealapp-ft-6.png'
-import searchFilter from '../images/meal-app/search-filter.png'
+import featureDishList from '../images/meal-app/feature-dish-list.png'
+import featureDish from '../images/meal-app/feature-dish.png'
+import featureItem from '../images/meal-app/feature-item.png'
+import featureInventory from '../images/meal-app/feature-inventory.png'
+import filterAndSearch from '../images/meal-app/filter-and-search.png'
+import matchFilter from '../images/meal-app/match-filter.gif'
 import ingredientOptions from '../images/meal-app/ingredient-options.png'
 import datalist from '../images/meal-app/datalist.png'
 ---
@@ -82,107 +85,114 @@ import datalist from '../images/meal-app/datalist.png'
 
   <Section>
     <Heading>Cool features</Heading>
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-3/5'>
+
+    <Feature>
+      <FeatureImage>
         <Picture
-          src={mealAppFt1}
-          alt='meal app feature 1'
-          widths={[880, 620, 400]}
-          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='706:602'
+          src={featureDishList}
+          alt='feature dish list'
+          widths={[600, 472]}
+          sizes='(max-width: 1024px) 75vw, (max-width: 1200px) 40vw, 472px'
+          aspectRatio='510:383'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         You can add your recipes and their ingredients to a list of meals, and
         sort them by the date you last used them, which is helpful in keeping a
         rotation. To that end, you can tag dishes that you want to be active in
         your rotation, so if you have meals that you don’t want as often, you
         can filter them out. All dishes can be filtered by categories/tags that
         are created by you.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-3/5'>
-        <Picture
-          src={mealAppFt2}
-          alt='meal app feature 2'
-          widths={[880, 620, 400]}
-          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='706:602'
+    <Feature>
+      <FeatureImage>
+        <img
+          src={matchFilter.src}
+          alt='filter matching'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         The categories can be filtered by matching any of the selected
         categories, or all of them (i.e. an OR filter or an AND filter).
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-3/5'>
+    <Feature>
+      <FeatureImage>
         <Picture
-          src={mealAppFt3}
-          alt='meal app feature 3'
+          src={featureDish}
+          alt='dish feature'
           widths={[880, 620, 400]}
           sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='706:602'
+          aspectRatio='1057:680'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         For each dish, you can see which of the ingredients you have and don’t
         have.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-3/5'>
-        <img src={addGif.src} alt='' />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+    <Feature>
+      <FeatureImage>
+        <img
+          src={addGif.src}
+          alt='adding item gif'
+          class='drop-shadow-custom'
+        />
+      </FeatureImage>
+      <FeatureText>
         When entering in purchase items, the form remembers details about the
         current item that you’ve previously entered and autofills them for you.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-3/5'>
+    <Feature>
+      <FeatureImage>
         <Picture
-          src={mealAppFt5}
+          src={featureItem}
           alt='meal app feature 5'
           widths={[880, 620, 400]}
           sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         An item’s details page shows you its average price based on your
         purchase history, as well as the average price for each location you
         purchased it at. This helps you stay informed about your cost
         efficiency.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap'>
-      <div class='lg:basis-3/5'>
+    <Feature>
+      <FeatureImage>
         <Picture
-          src={mealAppFt6}
-          alt='meal app feature 6'
+          src={featureInventory}
+          alt='inventory feature'
           widths={[880, 620, 400]}
           sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         The inventory helps you reduce your food waste and use your items
         efficiently by sorting by expiration dates and listing dishes that each
         item can be used in.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
   </Section>
 
   <Section>
-    <div class='lg:flex'>
-      <p class='mb-8 lg:basis-1/2'>
+    <div class='lg:flex lg:items-start'>
+      <p class='mb-8 lg:basis-1/2 lg:pr-10'>
         The ingredients in dishes have a great deal of flexibility. You can make
         things optional, list substitutes, and specify another ingredient that
         this item “counts as” (e.g. your sandwich dish has “cheese” as an
@@ -191,14 +201,19 @@ import datalist from '../images/meal-app/datalist.png'
         “cheese”). Substitutes like that are taken into account when filtering
         dishes on whether or not you have all the required ingredients.
       </p>
-      <div class='mb-10 lg:basis-1/2'>
-        <Picture
-          src={ingredientOptions}
-          alt='ingredient options'
-          widths={[746, 512, 400]}
-          sizes='(max-width: 1024px) 100vw, 512'
-          aspectRatio='746:322'
-        />
+      <div
+        class='max-w-2xl mb-10 lg:basis-1/2 bg-gradient-to-tr from-[#c77d6b] to-[#dbc188] rounded-xl'
+      >
+        <div class='p-[8%]'>
+          <Picture
+            src={ingredientOptions}
+            alt='ingredient options'
+            widths={[558, 400]}
+            sizes='(max-width: 1024px) 100vw, 512'
+            aspectRatio='559:135'
+            class='drop-shadow-custom'
+          />
+        </div>
       </div>
     </div>
 
@@ -244,17 +259,23 @@ import datalist from '../images/meal-app/datalist.png'
   </Section>
 
   <Section>
-    <div class='md:flex md:flex-wrap'>
-      <div class='md:basis-2/3 lg:basis-2/5'>
-        <Picture
-          src={searchFilter}
-          alt='search and filter'
-          widths={[500, 400]}
-          sizes='(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 400'
-          aspectRatio='460:712'
-        />
+    <div class='md:flex md:flex-wrap md:items-start'>
+      <div
+        class='mb-10 max-w-sm md:basis-2/3 lg:basis-2/5 bg-gradient-to-tr from-[#916586] to-[#946666] rounded-xl'
+      >
+        <div class='p-[13%]'>
+          <Picture
+            src={filterAndSearch}
+            alt='filter and search'
+            widths={[500, 400]}
+            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 400'
+            aspectRatio='300:549'
+            class='drop-shadow-custom'
+          />
+        </div>
       </div>
-      <div class='lg:basis-3/5'>
+
+      <div class='lg:basis-3/5 lg:pl-10'>
         <Heading>Technical challenges</Heading>
         <p class='mb-10'>
           In a couple of places in the app you have a big list of items or
@@ -289,8 +310,8 @@ import datalist from '../images/meal-app/datalist.png'
 
   <Section>
     <Heading>Spotlight: &lt;datalist&gt; element</Heading>
-    <div class='md:flex'>
-      <div class='md:basis-1/2'>
+    <div class='md:flex md:items-start'>
+      <div class='md:basis-1/2 md:pr-20'>
         <p class='mb-6'>
           When you're inputting an ingredient in a recipe, or logging the
           purchase of an item, you want that item to be from the single source
@@ -301,25 +322,31 @@ import datalist from '../images/meal-app/datalist.png'
           really don't want to have to scroll through a dropdown. A
           &lt;datalist&gt; was an ideal solution for this problem because you
           can just type in what you're looking for and see what already exists.
-          The other key benefit is that if you need to add a new item, you're
-          not restricted to the available options, the way you would be with a
-          &lt;select&gt;. You can enter in the new name as with a regular input,
-          and the app will add that item to the database along with whatever
-          dish or purchase item you're creating.
         </p>
       </div>
 
-      <div class='md:basis-1/2'>
-        <Picture
-          src={datalist}
-          alt='datalist element'
-          widths={[512, 400]}
-          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 512'
-          aspectRatio='461:382'
-          class='basis-1/3'
-        />
+      <div
+        class='max-w-md md:basis-1/2 mb-10 bg-gradient-to-tr from-[#2c5666] to-[#4e557a] rounded-xl'
+      >
+        <div class='p-[10%]'>
+          <Picture
+            src={datalist}
+            alt='datalist element'
+            widths={[512, 400]}
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 512'
+            aspectRatio='380:254'
+            class='drop-shadow-custom'
+          />
+        </div>
       </div>
     </div>
+    <p class='mb-6 max-w-lg'>
+      The other key benefit is that if you need to add a new item, you're not
+      restricted to the available options, the way you would be with a
+      &lt;select&gt;. You can enter in the new name as with a regular input, and
+      the app will add that item to the database along with whatever dish or
+      purchase item you're creating.
+    </p>
   </Section>
 
   <Section>
