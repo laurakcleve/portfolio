@@ -8,11 +8,13 @@ import GithubLink from '../components/project-links/GithubLink.astro'
 import ListItem from '../components/ListItem.astro'
 import Heading from '../components/Heading.astro'
 
-import screenshot from '../images/nemesis-ai/main.png'
-import screenshotMobile from '../images/nemesis-ai/nem-mobile.png'
-import nem3 from '../images/nemesis-ai/nem-3.png'
-import nemDoc1 from '../images/nemesis-ai/nem-doc-1.png'
-import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
+import mainScreenshot from '../images/nemesis-ai/main.png'
+import mobileScreenshot from '../images/nemesis-ai/mobile.png'
+import debugLog from '../images/nemesis-ai/debug-log.png'
+import canvas from '../images/nemesis-ai/canvas.png'
+import canvas1 from '../images/nemesis-ai/canvas-1.png'
+import canvas2 from '../images/nemesis-ai/canvas-2.png'
+import canvas3 from '../images/nemesis-ai/canvas-3.png'
 ---
 
 <ProjectLayout title='Nemesis AI | Laura Cleveland'>
@@ -37,10 +39,10 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
     </p>
 
     <Picture
-      src={screenshot}
+      src={mainScreenshot}
       alt='screenshot'
       widths={[1024, 768, 400]}
-      sizes='(max-width: 1200px) 100vw, 1024'
+      sizes='(max-width: 1200px) 100vw, 1024px'
       aspectRatio='1297:885'
       class='mb-8 drop-shadow-custom'
     />
@@ -99,14 +101,20 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
   <Section>
     <div class='flex flex-wrap lg:flex-nowrap lg:flex-row'>
       <div class='sm:basis-2/3 md:basis-3/5 lg:basis-2/5'>
-        <Picture
-          src={screenshotMobile}
-          alt='screenshot'
-          widths={[600, 400]}
-          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 600'
-          aspectRatio='593:694'
-          class='mb-10 rounded-2xl'
-        />
+        <div
+          class='max-w-2xl mb-10 lg:basis-1/2 bg-gradient-to-tr from-[#c77d6b] to-[#dbc188] rounded-xl'
+        >
+          <div class='py-[7%] px-[27%]'>
+            <Picture
+              src={mobileScreenshot}
+              alt='screenshot'
+              widths={[400, 256, 160]}
+              sizes='(max-width: 640px) 60vw, (max-width: 1024px) 25vw, 256px'
+              aspectRatio='401:867'
+              class='drop-shadow-custom'
+            />
+          </div>
+        </div>
       </div>
 
       <div class='lg:basis-1/2 lg:ml-12'>
@@ -121,26 +129,32 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
       </div>
     </div>
 
-    <p class='max-w-2xl'>
-      The app is pretty straightforward, but one extra thing I added for my own
-      sanity was a debugging log. During development I quickly found that
-      debugging LLM inputs and outputs was a whole different beast than
-      debugging I had done for any kind of project I'd done before. The logs
-      usually consist of large amounts of text that are hard to parse at a
-      glance, and the outputs aren’t deterministic. I added a little modal that
-      logs out the data for the current answer. It shows the parts of the source
-      material that matched the similarity search, as well as the sections that
-      were sent to the API as context for the answer.
+    <p class='max-w-2xl mb-10'>
+      One extra thing I added for my own sanity was a debugging log. During
+      development I quickly found that debugging LLM inputs and outputs was a
+      whole different beast than debugging I had done for any kind of project
+      I'd done before. The logs usually consist of large amounts of text that
+      are hard to parse at a glance, and the outputs aren’t deterministic. I
+      added a little modal that logs out the data for the current answer. It
+      shows the parts of the source material that matched the similarity search,
+      as well as the sections that were sent to the API as context for the
+      answer.
     </p>
 
-    <Picture
-      src={nem3}
-      alt='screenshot'
-      widths={[1024, 768, 400]}
-      sizes='(max-width: 1024px) 100vw, 1024'
-      aspectRatio='1204:694'
-      class='mt-10 rounded-2xl'
-    />
+    <div
+      class='max-w-4xl mb-10 mx-auto lg:basis-1/2 bg-gradient-to-tr from-[#916586] to-[#946666] rounded-xl'
+    >
+      <div class='p-[8%]'>
+        <Picture
+          src={debugLog}
+          alt='debug log'
+          widths={[800, 600, 400]}
+          sizes='(max-width: 1024px) 80vw, 800px'
+          aspectRatio='800:567'
+          class='drop-shadow-custom'
+        />
+      </div>
+    </div>
   </Section>
 
   <Section>
@@ -168,16 +182,22 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
   </Section>
 
   <Section>
-    <div class='flex flex-wrap lg:flex-nowrap lg:flex-row'>
-      <div class='sm:basis-2/3 md:basis-3/5 lg:basis-2/5'>
-        <Picture
-          src={nemDoc1}
-          alt='screenshot'
-          widths={[600, 410]}
-          sizes='(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 410'
-          aspectRatio='618:694'
-          class='mb-10 rounded-2xl'
-        />
+    <div class='flex flex-wrap lg:flex-nowrap'>
+      <div class='lg:basis-2/5'>
+        <div
+          class='mb-10 bg-gradient-to-tr from-[#2c5666] to-[#4e557a] rounded-xl'
+        >
+          <div class='p-[5%]'>
+            <Picture
+              src={canvas}
+              alt='canvas'
+              widths={[600, 410]}
+              sizes='(max-width: 640px) 100vw, (max-width: 1024px) 600px, 410px'
+              aspectRatio='1200:763'
+              class='drop-shadow-custom-small'
+            />
+          </div>
+        </div>
       </div>
 
       <div class='lg:basis-1/2 lg:ml-12'>
@@ -186,20 +206,50 @@ import nemDoc2 from '../images/nemesis-ai/nem-doc-2.png'
           I’ve grown more and more fond of keeping notes as I work on a project,
           and on this project I was the most thorough I’ve been thus far. I like
           to use Obsidian for my notes and have been trying out their Canvas
-          feature as a new way of laying everything out. I plan to use these
-          notes to put together a blog post on the process.
+          feature as a new way of laying everything out. These notes will be
+          invaluable in putting together a blog post on the process.
         </p>
       </div>
     </div>
 
-    <Picture
-      src={nemDoc2}
-      alt='screenshot'
-      widths={[1024, 768, 400]}
-      sizes='(max-width: 1200px) 100vw, 1024'
-      aspectRatio='1202:803'
-      class='rounded-2xl'
-    />
+    <div
+      class='md:inline-block bg-gradient-to-tr from-[#c77d6b] to-[#dbc188] rounded-xl'
+    >
+      <div
+        class='p-[5%] lg:p-[2%] flex flex-col items-center lg:flex-row gap-4 sm:gap-6'
+      >
+        <div class='max-w-[452px]'>
+          <Picture
+            src={canvas1}
+            alt='screenshot'
+            widths={[452, 340]}
+            sizes='(max-width: 1200px) 100vw, 1024px'
+            aspectRatio='452:227'
+            class='drop-shadow-custom-small'
+          />
+        </div>
+        <div class='max-w-[452px]'>
+          <Picture
+            src={canvas2}
+            alt='screenshot'
+            widths={[452, 340]}
+            sizes='(max-width: 1200px) 100vw, 1024px'
+            aspectRatio='452:227'
+            class='drop-shadow-custom-small'
+          />
+        </div>
+        <div class='max-w-[452px]'>
+          <Picture
+            src={canvas3}
+            alt='screenshot'
+            widths={[452, 340]}
+            sizes='(max-width: 1200px) 100vw, 1024px'
+            aspectRatio='452:227'
+            class='drop-shadow-custom-small'
+          />
+        </div>
+      </div>
+    </div>
   </Section>
 
   <Section>
