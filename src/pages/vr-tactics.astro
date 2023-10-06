@@ -7,16 +7,19 @@ import ProjectLayout from '../layouts/ProjectLayout.astro'
 import Section from '../components/Section.astro'
 
 import demo from '/gameplay-demo.mp4'
-import featureControls from '../images/vr-tactics/feature-controls.jpg'
-import featurePathfinding from '../images/vr-tactics/feature-pathfinding.jpg'
-import featureAi from '../images/vr-tactics/feature-ai.jpg'
-import featureCancel from '../images/vr-tactics/feature-cancel.jpg'
+import featureControls from '../images/vr-tactics/feature-controls.png'
+import featurePathfinding from '../images/vr-tactics/feature-pathfinding.png'
+import featureAi from '../images/vr-tactics/feature-ai.png'
+import featureCancel from '../images/vr-tactics/feature-cancel.png'
 import miniTest from '../images/vr-tactics/mini-test.gif'
 import unitychan from '../images/vr-tactics/unitychan.jpg'
-import textures from '../images/vr-tactics/textures.jpg'
+import textures from '../images/vr-tactics/textures.png'
 import workflow from '/workflow.mp4'
 import bug from '/creepyBug.mp4'
 import Heading from '../components/Heading.astro'
+import Feature from '../components/features/Feature.astro'
+import FeatureImage from '../components/features/FeatureImage.astro'
+import FeatureText from '../components/features/FeatureText.astro'
 ---
 
 <ProjectLayout title='VR Tactics | Laura Cleveland'>
@@ -35,7 +38,7 @@ import Heading from '../components/Heading.astro'
   </Section>
 
   <div
-    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#70cdf5] to-[#6073f7]'
+    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#67e9d6] to-[#6d6acb]'
   >
   </div>
 
@@ -55,7 +58,9 @@ import Heading from '../components/Heading.astro'
         class='shrink-0 flex justify-center xs:flex-col xs:justify-normal gap-4 xs:gap-8 xs:items-end'
       >
         <div>
-          <GithubLink url='#' />
+          <GithubLink
+            url='https://github.com/laurakcleve/unity-vr-tactics-game'
+          />
         </div>
       </div>
     </div>
@@ -77,67 +82,76 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <Heading>Features</Heading>
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-1/3'>
+
+    <Feature>
+      <FeatureImage>
         <Picture
           src={featureControls}
           alt='controls feature'
-          widths={[706]}
-          aspectRatio='706:602'
+          widths={[552, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
+          aspectRatio='552:462'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         The controls are anchored to one hand and you point and click with the
         other, so you can walk around the stage wherever you want and the
         controls move with you.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-1/3'>
+    <Feature>
+      <FeatureImage>
         <Picture
           src={featurePathfinding}
           alt='pathfinding feature'
-          widths={[706]}
-          aspectRatio='706:602'
+          widths={[552, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
+          aspectRatio='552:463'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         The movement uses A* pathfinding to find the shortest path to the
         destination.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap mb-20'>
-      <div class='lg:basis-1/3'>
+    <Feature>
+      <FeatureImage>
         <Picture
           src={featureAi}
           alt='AI feature'
-          widths={[706]}
-          aspectRatio='706:602'
+          widths={[552, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
+          aspectRatio='552:463'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         The game alternates between player-controlled units and AI-controlled
         units, and the AI units move to the nearest enemy and, if in range,
         attack.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
 
-    <div class='flex flex-wrap'>
-      <div class='lg:basis-1/3'>
+    <Feature>
+      <FeatureImage>
         <Picture
           src={featureCancel}
           alt='cancel feature'
-          widths={[706]}
+          widths={[880, 620, 400]}
+          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
           aspectRatio='706:602'
+          class='drop-shadow-custom'
         />
-      </div>
-      <p class='mt-6 lg:m-0 lg:basis-2/5 lg:pl-10'>
+      </FeatureImage>
+      <FeatureText>
         Movements and attacks can be confirmed or cancelled. I added a state
         machine to more easily handle this functionality.
-      </p>
-    </div>
+      </FeatureText>
+    </Feature>
   </Section>
 
   <Section>
@@ -147,7 +161,9 @@ import Heading from '../components/Heading.astro'
         state machine, as well as some unit classes and abilities. I had a lot
         of fun implementing skills that had different areas of effect.
       </p>
-      <div class='mb-10 lg:basis-3/5'>
+      <div
+        class='mb-10 lg:basis-3/5 rounded-xl overflow-hidden drop-shadow-custom'
+      >
         <img src={miniTest.src} alt='' />
       </div>
     </div>
@@ -184,21 +200,22 @@ import Heading from '../components/Heading.astro'
     <div class='lg:flex lg:flex-row-reverse'>
       <div class='lg:basis-2/3 lg:pl-16'>
         <Heading>Other fun stuff</Heading>
-        <p class='mb-10'>
+        <p class='mb-10 max-w-2xl'>
           The model I used for the character units is Unity-chan, a free asset
           released by Unity Japan that comes with many animations out of the
           box. It was a really great resource that allowed me to get up and
-          running a lot faster than if I had taken the time to learn all the ins
-          and outs of modeling and animating.
+          running a lot faster than if I had taken the time to model and animate
+          my own characters.
         </p>
       </div>
 
-      <div class='mb-10 lg:basis-1/3'>
-        <div class='rounded-lg overflow-hidden'>
+      <div class='mb-10 lg:basis-1/3 max-w-xl'>
+        <div class='rounded-lg overflow-hidden drop-shadow-custom'>
           <Picture
             src={unitychan}
             alt='unity-chan'
-            widths={[603]}
+            widths={[600, 400]}
+            sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 30vw, 400px'
             aspectRatio='603:266'
           />
         </div>
@@ -219,13 +236,19 @@ import Heading from '../components/Heading.astro'
         </p>
       </div>
 
-      <div class='mb-10 lg:basis-1/3'>
-        <Picture
-          src={textures}
-          alt='unity-chan textures'
-          widths={[573]}
-          aspectRatio='573:581'
-        />
+      <div
+        class='mb-10 lg:basis-1/3 bg-gradient-to-tr from-[#c77d6b] to-[#dbc188] rounded-xl'
+      >
+        <div class='p-[8%]'>
+          <Picture
+            src={textures}
+            alt='unity-chan textures'
+            widths={[880, 600, 400]}
+            sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 30vw, 400px'
+            aspectRatio='956:687'
+            class='drop-shadow-custom'
+          />
+        </div>
       </div>
     </div>
 
@@ -237,7 +260,7 @@ import Heading from '../components/Heading.astro'
       </p>
 
       <div class='lg:basis-1/3'>
-        <div class='rounded-xl overflow-hidden'>
+        <div class='rounded-xl overflow-hidden drop-shadow-custom'>
           <video autoplay loop muted>
             <source src={workflow} type='video/mp4' />
           </video>
@@ -255,7 +278,7 @@ import Heading from '../components/Heading.astro'
         to your mesh.
       </p>
       <div class='lg:basis-1/2'>
-        <div class='rounded-lg overflow-hidden'>
+        <div class='rounded-xl overflow-hidden'>
           <video autoplay loop muted>
             <source src={bug} type='video/mp4' />
           </video>
@@ -266,7 +289,7 @@ import Heading from '../components/Heading.astro'
 
   <Section>
     <div class='flex justify-center gap-4'>
-      <GithubLink url='#' />
+      <GithubLink url='https://github.com/laurakcleve/unity-vr-tactics-game' />
     </div>
   </Section>
 </ProjectLayout>

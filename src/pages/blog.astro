@@ -8,7 +8,7 @@ import ListItem from '../components/ListItem.astro'
 import Section from '../components/Section.astro'
 import Heading from '../components/Heading.astro'
 
-import screenshot from '../images/terrain-blog/screenshot.jpg'
+import screenshot from '../images/terrain-blog/main.png'
 import imageLoad from '/image-load.mp4'
 import performance from '../images/terrain-blog/performance.jpg'
 ---
@@ -23,18 +23,18 @@ import performance from '../images/terrain-blog/performance.jpg'
       advantage of its convenient image features.
     </p>
 
-    <div class='mb-8 rounded-2xl overflow-hidden shadow-xl'>
-      <Picture
-        src={screenshot}
-        alt='screenshot'
-        widths={[1059]}
-        aspectRatio='1059:739'
-      />
-    </div>
+    <Picture
+      src={screenshot}
+      alt='screenshot'
+      widths={[1024, 768, 400]}
+      sizes='(max-width: 1200px) 100vw, 1024px'
+      aspectRatio='1297:885'
+      class='mb-8 drop-shadow-custom'
+    />
   </Section>
 
   <div
-    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#70cdf5] to-[#6073f7]'
+    class='[grid-column:2] w-full h-1 bg-gradient-to-br from-[#67e9d6] to-[#6d6acb]'
   >
   </div>
 
@@ -53,8 +53,8 @@ import performance from '../images/terrain-blog/performance.jpg'
       <div
         class='shrink-0 flex justify-center xs:flex-col xs:justify-normal gap-4 xs:gap-8 xs:items-end'
       >
-        <SiteLink url='#' />
-        <GithubLink url='#' />
+        <SiteLink url='https://1d3trees.com/' />
+        <GithubLink url='https://github.com/laurakcleve/terrain-blog-mdx' />
       </div>
     </div>
   </Section>
@@ -118,20 +118,22 @@ import performance from '../images/terrain-blog/performance.jpg'
 
   <Section>
     <div class='flex justify-center'>
-      <Picture
-        src={performance}
-        alt='performance'
-        widths={[977]}
-        aspectRatio='977:807'
-        class='max-w-xl'
-      />
+      <div class='max-w-xl rounded-xl overflow-hidden drop-shadow-custom'>
+        <Picture
+          src={performance}
+          alt='performance'
+          widths={[977]}
+          sizes='(max-width: 768px) 100vw, 576px'
+          aspectRatio='977:807'
+        />
+      </div>
     </div>
   </Section>
 
   <Section>
     <div class='flex justify-center gap-4'>
-      <SiteLink url='#' />
-      <GithubLink url='#' />
+      <SiteLink url='https://1d3trees.com/' />
+      <GithubLink url='https://github.com/laurakcleve/terrain-blog-mdx' />
     </div>
   </Section>
 </ProjectLayout>

@@ -4,10 +4,10 @@ import { Image } from '@astrojs/image/components'
 import '@fontsource/dm-sans/600.css'
 import '@fontsource/dm-sans/400.css'
 
-import logo from '../images/logo.svg'
-import githubIcon from '../images/github.svg'
-import twitterIcon from '../images/twitter.svg'
-import linkedinIcon from '../images/linkedin.svg'
+import Logo from '../images/Logo.astro'
+import GithubIcon from '../images/Github.astro'
+import TwitterIcon from '../images/Twitter.astro'
+import LinkedInIcon from '../images/LinkedIn.astro'
 
 interface Props {
   title: string
@@ -33,7 +33,7 @@ const { title } = Astro.props
     >
       <div class='flex [grid-column:_2] py-10'>
         <a href='/' class=''>
-          <Image alt='' src={logo} width={32} height={32} />
+          <Logo color='#ffe1a6' width='32' height='32' />
         </a>
         <a
           href='https://github.com/laurakcleve'
@@ -41,7 +41,7 @@ const { title } = Astro.props
           rel='noopener noreferrer'
           class='ml-auto mr-4'
         >
-          <Image alt='Github icon' src={githubIcon} width={24} height={24} />
+          <GithubIcon color='#ffad8f' width='24' height='24' />
         </a>
         <a
           href='https://twitter.com/laurak_cleve'
@@ -49,19 +49,14 @@ const { title } = Astro.props
           rel='noopener noreferrer'
           class='mr-4'
         >
-          <Image alt='Twitter icon' src={twitterIcon} width={24} height={24} />
+          <TwitterIcon color='#ffad8f' width='24' height='24' />
         </a>
         <a
           href='https://www.linkedin.com/in/laura-cleveland-4495844a/'
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Image
-            alt='LinkedIn icon'
-            src={linkedinIcon}
-            width={24}
-            height={24}
-          />
+          <LinkedInIcon color='#ffad8f' width='24' height='24' />
         </a>
       </div>
       <slot />

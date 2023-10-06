@@ -11,7 +11,6 @@ interface Props {
 const { title, description, image, url } = Astro.props
 ---
 
-<!-- Picture sizes, widths, ratio, all placeholders for now -->
 <div class='mb-24 last:mb-0 bg-[#31373f] shadow-2xl'>
   <a href={url} class='relative group'>
     <div class='p-8 pb-12 md:pb-0 flex flex-wrap'>
@@ -24,11 +23,11 @@ const { title, description, image, url } = Astro.props
       <div class='md:basis-2/5'>
         <Picture
           src={image}
-          widths={[600]}
-          alt='nemesis-ai-screenshot'
+          widths={[300, 400, 600]}
+          alt='thumbnail'
           aspectRatio='3:2'
-          sizes='(max-width: 800px) 100vw, 800px'
-          class='rounded-lg shadow-xl'
+          sizes='(max-width: 768px) 100vw, 400px'
+          class='rounded-lg drop-shadow-custom-small'
         />
       </div>
     </div>
