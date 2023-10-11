@@ -12,14 +12,14 @@ import SiteLink from '../components/project-links/SiteLink.astro'
 import GithubLink from '../components/project-links/GithubLink.astro'
 
 import main from '../images/meal-app/main.png'
-import addGif from '../images/meal-app/purchase-item-add.gif'
 import featureDishList from '../images/meal-app/feature-dish-list.png'
 import featureDish from '../images/meal-app/feature-dish.png'
+import matchFilter from '../images/meal-app/feature-dish-filter.gif'
 import featureItem from '../images/meal-app/feature-item.png'
 import featureInventory from '../images/meal-app/feature-inventory.png'
-import filterAndSearch from '../images/meal-app/filter-and-search.png'
-import matchFilter from '../images/meal-app/match-filter.gif'
+import autofillGif from '../images/meal-app/feature-autofill.gif'
 import ingredientOptions from '../images/meal-app/ingredient-options.png'
+import filterAndSearch from '../images/meal-app/filter-and-search.png'
 import datalist from '../images/meal-app/datalist.png'
 ---
 
@@ -88,14 +88,16 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <Picture
-          src={featureDishList}
-          alt='feature dish list'
-          widths={[600, 472]}
-          sizes='(max-width: 1024px) 75vw, (max-width: 1200px) 40vw, 472px'
-          aspectRatio='510:383'
-          class='drop-shadow-custom'
-        />
+        <a href={featureDishList.src} target='_blank'>
+          <Picture
+            src={featureDishList}
+            alt='feature dish list'
+            widths={[701, 472]}
+            sizes='(max-width: 1024px) 75vw, (max-width: 1200px) 40vw, 701px'
+            aspectRatio='701:757'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         You can add your recipes and their ingredients to a list of meals, and
@@ -109,11 +111,13 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <img
-          src={matchFilter.src}
-          alt='filter matching'
-          class='drop-shadow-custom'
-        />
+        <a href={matchFilter.src} target='_blank'>
+          <img
+            src={matchFilter.src}
+            alt='filter matching'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         The categories can be filtered by matching any of the selected
@@ -123,14 +127,16 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <Picture
-          src={featureDish}
-          alt='dish feature'
-          widths={[880, 620, 400]}
-          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='1057:680'
-          class='drop-shadow-custom'
-        />
+        <a href={featureDish.src} target='_blank'>
+          <Picture
+            src={featureDish}
+            alt='dish feature'
+            widths={[605, 400]}
+            sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 605px'
+            aspectRatio='605:487'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         For each dish, you can see which of the ingredients you have and don’t
@@ -140,11 +146,13 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <img
-          src={addGif.src}
-          alt='adding item gif'
-          class='drop-shadow-custom'
-        />
+        <a href={autofillGif.src} target='_blank'>
+          <img
+            src={autofillGif.src}
+            alt='adding item gif'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         When entering in purchase items, the form remembers details about the
@@ -154,14 +162,16 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <Picture
-          src={featureItem}
-          alt='meal app feature 5'
-          widths={[880, 620, 400]}
-          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='706:602'
-          class='drop-shadow-custom'
-        />
+        <a href={featureItem.src} target='_blank'>
+          <Picture
+            src={featureItem}
+            alt='item feature'
+            widths={[684, 400]}
+            sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 684px'
+            aspectRatio='684:823'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         An item’s details page shows you its average price based on your
@@ -173,14 +183,16 @@ import datalist from '../images/meal-app/datalist.png'
 
     <Feature>
       <FeatureImage>
-        <Picture
-          src={featureInventory}
-          alt='inventory feature'
-          widths={[880, 620, 400]}
-          sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 620px'
-          aspectRatio='706:602'
-          class='drop-shadow-custom'
-        />
+        <a href={featureInventory.src} target='_blank'>
+          <Picture
+            src={featureInventory}
+            alt='inventory feature'
+            widths={[724, 620, 400]}
+            sizes='(max-width: 1024px) 100vw, (max-width: 1200px) 60vw, 724px'
+            aspectRatio='724:791'
+            class='drop-shadow-custom'
+          />
+        </a>
       </FeatureImage>
       <FeatureText>
         The inventory helps you reduce your food waste and use your items
@@ -264,14 +276,16 @@ import datalist from '../images/meal-app/datalist.png'
         class='mb-10 max-w-sm md:basis-2/3 lg:basis-2/5 bg-gradient-to-tr from-[#916586] to-[#946666] rounded-xl'
       >
         <div class='p-[13%]'>
-          <Picture
-            src={filterAndSearch}
-            alt='filter and search'
-            widths={[500, 400]}
-            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 400px'
-            aspectRatio='300:549'
-            class='drop-shadow-custom'
-          />
+          <a href={filterAndSearch.src} target='_blank'>
+            <Picture
+              src={filterAndSearch}
+              alt='filter and search'
+              widths={[347, 200]}
+              sizes='(max-width: 768px) 100vw, (max-width: 1024px) 60vw, 347px'
+              aspectRatio='347:744'
+              class='drop-shadow-custom'
+            />
+          </a>
         </div>
       </div>
 
@@ -329,14 +343,16 @@ import datalist from '../images/meal-app/datalist.png'
         class='max-w-md md:basis-1/2 mb-10 bg-gradient-to-tr from-[#2c5666] to-[#4e557a] rounded-xl'
       >
         <div class='p-[10%]'>
-          <Picture
-            src={datalist}
-            alt='datalist element'
-            widths={[512, 400]}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 512px'
-            aspectRatio='380:254'
-            class='drop-shadow-custom'
-          />
+          <a href={datalist.src} target='_blank'>
+            <Picture
+              src={datalist}
+              alt='datalist element'
+              widths={[380, 200]}
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 40vw, 380px'
+              aspectRatio='380:254'
+              class='drop-shadow-custom'
+            />
+          </a>
         </div>
       </div>
     </div>
