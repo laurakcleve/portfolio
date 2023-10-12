@@ -34,8 +34,9 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
     </p>
     <p class='mb-12 max-w-xl'>
       The project is a two-part system: the Python scripts that build an index
-      from the rules of the game, and the Next app that provides the interface
-      and feeds GPT the parts of the index it needs to answer user questions.
+      from the rules of the game, and the Next.js app that provides the
+      interface and feeds GPT the parts of the index it needs to answer user
+      questions.
     </p>
 
     <Picture
@@ -83,22 +84,24 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
   <Section>
     <Heading>Motivation and purpose</Heading>
     <p class='mb-12 max-w-xl'>
-      The emergence of new AI tools has been a great opportunity for me to
-      explore different corners of programming and find new things to bring into
-      web development.
+      The rise of new AI tools has been wild and exciting, and I've had fun
+      exploring different corners of the programming world and finding new
+      things to bring into web development.
     </p>
     <p class='max-w-xl'>
-      I started trying to create a chatbot with a custom knowledge base by using
-      GPT Index, now Llama index. It’s a library that does most of the heavy
-      lifting in creating your index and querying it. I tried it out with a
-      collection of markdown files that were the content of a blog, but there
-      was a lot going on behind the scenes that I didn’t understand. I struggled
-      through some projects where I did everything from scratch, which helped me
-      learn the mechanisms way better. I refined my techniques over a few
-      different iterations of question-answering tools, and after building this
-      app, I feel more confident going back and learning the more robust tooling
-      out there. I better understand the tradeoffs of different ones, and can
-      make more informed decisions about which to use for different situations.
+      One of the first things I tried to build was a chatbot with a custom
+      knowledge base. I started by using GPT Index, (now known as Llama index)
+      which is a library that does most of the heavy lifting in creating an
+      index from your data and then querying it. I tried it out with a
+      collection of markdown files containing blog post content, but there was a
+      lot going on behind the scenes that I didn’t understand. I struggled
+      through a couple smaller projects where I did everything from scratch,
+      which helped me learn the mechanisms way better. I refined my techniques
+      over a few different iterations of question-answering systems, and after
+      building this app, I feel more confident going back and learning the more
+      robust tooling out there. I better understand the tradeoffs of different
+      ones, and can make more informed decisions about which to use for
+      different situations.
     </p>
   </Section>
 
@@ -166,40 +169,42 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
     <p class='mb-12 max-w-xl'>
       I ran headlong into the ever-persistent problem of LLMs: accuracy. The
       process of question-answering with a custom knowledge base at its most
-      basic is pretty straightforward, but the results can be all over the place
-      and it can be extremely difficult to get consistent, accurate answers.
+      basic is straightforward, but the results can be all over the place and it
+      can be extremely difficult to get consistent, accurate answers.
     </p>
     <p class='max-w-xl'>
       I had some difficulty with the common method of retrieval where you use a
-      similarity search to retrieve chunks from your data, and feed some number
+      similarity search to retrieve chunks from your index, and feed some number
       of those to the completion model. At first I was having trouble retrieving
       the right information from the source material. I needed to have it split
       into large chunks, to include enough surrounding context, but the
       retrieval method works by selecting chunks based on how similar they are
       to the user’s question. Such large chunks meant that lots of them matched
-      the question just as well as others that were more relevant. The context
-      passed to the LLM was So I did an extra retrieval step; I made the chunks
-      small enough that I would get the most relevant ones, and then I would go
-      and get the larger sections that those chunks came from. This helped my
-      retrieval accuracy and context quality immensely.
+      the question just as well as others that were more relevant. So I did an
+      extra retrieval step: I made the chunks small enough that I would get the
+      most relevant ones, and then I retrieved the larger sections that those
+      chunks came from. This helped my retrieval accuracy and context quality
+      immensely.
     </p>
   </Section>
 
   <Section>
     <div class='flex flex-wrap lg:flex-nowrap lg:mb-16'>
-      <div class='lg:basis-2/5'>
+      <div class='lg:basis-1/2'>
         <div
           class='mb-10 bg-gradient-to-tr from-[#2c5666] to-[#4e557a] rounded-xl'
         >
           <div class='p-[5%]'>
-            <Picture
-              src={canvas}
-              alt='canvas'
-              widths={[600, 410]}
-              sizes='(max-width: 640px) 100vw, (max-width: 1024px) 600px, 410px'
-              aspectRatio='1200:763'
-              class='drop-shadow-custom-small'
-            />
+            <a href={canvas.src} target='_blank'>
+              <Picture
+                src={canvas}
+                alt='canvas'
+                widths={[600, 400]}
+                sizes='(max-width: 640px) 100vw, 600px'
+                aspectRatio='1200:763'
+                class='drop-shadow-custom-small'
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -207,11 +212,17 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
       <div class='lg:basis-1/2 lg:ml-12'>
         <Heading>Documenting the process</Heading>
         <p class='mb-12 max-w-xl'>
-          I’ve grown more and more fond of keeping notes as I work on a project,
-          and on this project I was the most thorough I’ve been thus far. I like
-          to use Obsidian for my notes and have been trying out their Canvas
-          feature as a new way of laying everything out. These notes will be
-          invaluable in putting together a blog post on the process.
+          I’ve grown more and more enthusiastic about keeping notes as I work on
+          a project, especially since I've discovered <a
+            href='https://obsidian.md/'
+            target='_blank'
+            rel='noopener noreferrer'
+            class='text-teal-500'>Obsidian</a
+          > and its Canvas feature, which lets you lay out blocks of content any
+          way you like. On this project I tried to really go over the top, keeping
+          daily logs of working through my objectives and thought processes. As of
+          now I don't know whether it's a better system than traditional linear notes,
+          but there are a lot of opportunities for improvement to explore.
         </p>
       </div>
     </div>
