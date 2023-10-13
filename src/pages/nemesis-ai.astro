@@ -11,7 +11,7 @@ import Heading from '../components/Heading.astro'
 import mainScreenshot from '../images/nemesis-ai/main.png'
 import mobileScreenshot from '../images/nemesis-ai/mobile.png'
 import debugLog from '../images/nemesis-ai/debug-log.png'
-import canvas from '../images/nemesis-ai/canvas.png'
+import canvas from '../images/nemesis-ai/canvas.jpg'
 import canvas1 from '../images/nemesis-ai/canvas-1.png'
 import canvas2 from '../images/nemesis-ai/canvas-2.png'
 import canvas3 from '../images/nemesis-ai/canvas-3.png'
@@ -199,9 +199,9 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
               <Picture
                 src={canvas}
                 alt='canvas'
-                widths={[600, 400]}
-                sizes='(max-width: 640px) 100vw, 600px'
-                aspectRatio='1200:763'
+                widths={[800, 400]}
+                sizes='(max-width: 640px) 100vw, 800px'
+                aspectRatio='7306:2893'
                 class='drop-shadow-custom-small'
               />
             </a>
@@ -234,34 +234,40 @@ import canvas3 from '../images/nemesis-ai/canvas-3.png'
         class='p-[5%] lg:p-[2%] flex flex-col items-center lg:flex-row gap-4 sm:gap-6'
       >
         <div class='max-w-[452px]'>
-          <Picture
-            src={canvas1}
-            alt='screenshot'
-            widths={[452, 340]}
-            sizes='(max-width: 1200px) 100vw, 1024px'
-            aspectRatio='452:227'
-            class='drop-shadow-custom-small'
-          />
+          <a href={canvas1.src} target='_blank'>
+            <Picture
+              src={canvas1}
+              alt='screenshot'
+              widths={[452, 340]}
+              sizes='(max-width: 1200px) 100vw, 1024px'
+              aspectRatio='452:227'
+              class='drop-shadow-custom-small'
+            />
+          </a>
         </div>
         <div class='max-w-[452px]'>
-          <Picture
-            src={canvas2}
-            alt='screenshot'
-            widths={[452, 340]}
-            sizes='(max-width: 1200px) 100vw, 1024px'
-            aspectRatio='452:227'
-            class='drop-shadow-custom-small'
-          />
+          <a href={canvas2.src} target='_blank'>
+            <Picture
+              src={canvas2}
+              alt='screenshot'
+              widths={[452, 340]}
+              sizes='(max-width: 1200px) 100vw, 1024px'
+              aspectRatio='452:227'
+              class='drop-shadow-custom-small'
+            />
+          </a>
         </div>
         <div class='max-w-[452px]'>
-          <Picture
-            src={canvas3}
-            alt='screenshot'
-            widths={[452, 340]}
-            sizes='(max-width: 1200px) 100vw, 1024px'
-            aspectRatio='452:227'
-            class='drop-shadow-custom-small'
-          />
+          <a href={canvas3.src} target='_blank'>
+            <Picture
+              src={canvas3}
+              alt='screenshot'
+              widths={[452, 340]}
+              sizes='(max-width: 1200px) 100vw, 1024px'
+              aspectRatio='452:227'
+              class='drop-shadow-custom-small'
+            />
+          </a>
         </div>
       </div>
     </div>
